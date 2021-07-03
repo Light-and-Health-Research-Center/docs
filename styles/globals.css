@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: 'Inter', 'Open Sans', sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-cetaceanBlue-100;
+  }
+  h1 {
+    font-size: 48px;
+    font-weight: 700; /* Bold */
+  }
+  h2 {
+    font-size: 28px;
+    font-weight: 600; /* Semi-bold */
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: 700; /* Bold */
+  }
+  h4 {
+    font-size: 20px;
+    font-weight: 700; /* Bold */
+  }
+  h5 {
+    font-size: 16px;
+    font-weight: 600; /* Semi-bold */
+  }
+  h6 {
+    font-size: 1rem;
+    font-weight: 600; /* Semi-bold */
+  }
+  p {
+    font-size: 1rem;
+    @apply text-black-60;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 64px;
+    }
+    h2 {
+      font-size: 32px;
+    }
+    h3 {
+      font-size: 28px;
+    }
+    h4 {
+      font-size: 24px;
+    }
+    h5 {
+      font-size: 18px;
+    }
+  }
+}
