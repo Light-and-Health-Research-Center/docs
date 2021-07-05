@@ -3,7 +3,7 @@ import Link from "next/link";
 import SearchBar from "./SearchBar";
 import msLogo from "../../public/img/ms_logo.png";
 
-function TopBar() {
+export default function TopBar() {
   return (
     <header className="flex justify-between h-16 border-b border-black-20 p-2">
       <div className="relative h-auto w-20">
@@ -23,5 +23,3 @@ function TopBar() {
     </header>
   );
 }
-
-export default TopBar;

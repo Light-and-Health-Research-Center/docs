@@ -1,6 +1,6 @@
 import Books from "../undraw/Books";
 
-function Hero() {
+export default function Hero() {
   return (
     <section className="p-4 md:flex flex-row-reverse gap-16 justify-between md:p-12 md:mx-4 lg:mx-12">
       <div className="content-center w-auto md:w-2/4 md:flex relative">
@@ -20,5 +20,3 @@ function Hero() {
     </section>
   );
 }
-
-export default Hero;
