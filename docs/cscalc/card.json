@@ -2,5 +2,5 @@
   "title": "CS Calculator 2.0",
   "img_path": "/img/docs/cscalc/card.png",
   "desc": "Calculate the circadian effectiveness of a light source.",
-  "programs": ["Human"]
+  "programs": ["Human", "Transportation", "Energy", "Plant"]
 }

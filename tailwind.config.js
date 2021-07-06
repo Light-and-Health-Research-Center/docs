@@ -51,6 +51,13 @@ module.exports = {
         softBlur: "0 0 10px rgba(0, 0, 0, 0.15)",
         popFromBL: "-3px 3px 3px rgba(0, 0, 0, 0.20)",
       },
+      spacing: {
+        "1/3-4gap": "calc(33.33333% - 1rem)",
+        "1/2-4gap": "calc(50% - 1rem)",
+      },
+      scale: {
+        103: "1.03",
+      },
     },
   },
   variants: {

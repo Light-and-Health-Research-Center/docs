@@ -48,5 +48,7 @@ export default function CardPill({ program }) {
       return <TransportationPill />;
     case "Energy":
       return <EnergyPill />;
+    default:
+      return null;
   }
 }
