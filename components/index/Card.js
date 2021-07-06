@@ -23,8 +23,8 @@ export default function Card({ card }) {
           <p className="line-clamp-2 transition duration-500 ease-in-out">
             {card.desc}
           </p>
-          <div className="relative mt-auto -mr-4 w-full">
-            <div className="absolute top-0 right-0 bg-gradient-to-l from-white-100 h-full w-8 group-active:from-gray-200" />
+          <div className="relative mt-auto w-full">
+            <div className="absolute top-0 right-0 bg-gradient-to-l from-white-100 h-full w-5 group-active:from-gray-200" />
             <div className="w-full flex flex-row gap-2 overflow-x-scroll scrollbar-hide pr-4">
               {card.programs.sort().map((program) => (
                 <CardPill key={program} program={program} />
