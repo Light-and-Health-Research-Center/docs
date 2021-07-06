@@ -58,6 +58,9 @@ module.exports = {
       scale: {
         103: "1.03",
       },
+      screens: {
+        _hover: { raw: "(hover: hover)" },
+      },
     },
   },
   variants: {

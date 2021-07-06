@@ -3,7 +3,7 @@ import CardPill from "./CardPill";
 
 export default function Card({ card }) {
   return (
-    <div className="bg-white-100 rounded-xl drop-shadow-softerBlur cursor-pointer w-full lg:w-1/2-4gap 2xl:w-1/3-4gap group transition duration-150 ease-in-out hover:drop-shadow-softBlur hover:-translate-y-1 hover:scale-103">
+    <div className="bg-white-100 rounded-xl drop-shadow-softerBlur cursor-pointer w-full lg:w-1/2-4gap 2xl:w-1/3-4gap group transition duration-150 ease-in-out _hover:hover:drop-shadow-softBlur _hover:hover:-translate-y-1 _hover:hover:scale-103">
       <div className="flex">
         <div className="flex-shrink-0">
           <div className="relative h-36 w-32">
