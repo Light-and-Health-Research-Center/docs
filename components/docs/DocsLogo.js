@@ -3,7 +3,7 @@ import MSLogo from "../global/MSLogo";
 
 export default function DocsLogo({ offwhite }) {
   return (
-    <Link href="/../">
+    <Link href="/">
       <a
         className={`flex rounded-sm ms-focus-barbiePink ring-offset-4 ${
           offwhite ? "ring-offset-white-off" : ""

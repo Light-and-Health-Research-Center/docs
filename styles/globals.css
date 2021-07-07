@@ -5,6 +5,7 @@
 @layer base {
   * {
     font-family: 'Inter', 'Open Sans', sans-serif !important;
+    -webkit-tap-highlight-color: transparent;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply text-cetaceanBlue-100;
