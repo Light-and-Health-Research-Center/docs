@@ -9,7 +9,7 @@ export default function SearchBar({ center }) {
     >
       <SearchIcon className="text-black-20 px-2 w-16" />
       <input
-        className="appearance-none text-black-60 w-full rounded mx-2 focus:outline-none h-min"
+        className="appearance-none text-black-60 w-full rounded mx-2 focus:outline-none"
         type="text"
         placeholder="Search Documentation"
       />
