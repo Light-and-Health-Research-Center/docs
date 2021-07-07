@@ -56,7 +56,7 @@ module.exports = {
         "1/2-4gap": "calc(50% - 1rem)",
       },
       scale: {
-        103: "1.03",
+        102: "1.02",
       },
       screens: {
         _hover: { raw: "(hover: hover)" },

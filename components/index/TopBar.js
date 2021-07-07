@@ -1,24 +1,15 @@
-import Image from "next/image";
+import MSLogo from "../global/MSLogo";
 import Link from "next/link";
-import SearchBar from "./SearchBar";
-import msLogo from "../../public/img/ms_logo.png";
+import SearchBar from "../global/SearchBar";
 
 export default function TopBar() {
   return (
     <header className="flex justify-between h-16 border-b border-black-20 p-2">
-      <div className="relative h-auto w-20">
-        <Link href="https://www.google.com/">
-          <a>
-            <Image
-              className="cursor-pointer"
-              src={msLogo}
-              alt="Mount Sinai Health Logo"
-              layout="fill"
-              objectFit="contain"
-            />
-          </a>
-        </Link>
-      </div>
+      <Link href="/">
+        <a className="h-auto w-20 rounded-sm ms-focus-barbiePink focus:ring-offset-4">
+          <MSLogo />
+        </a>
+      </Link>
       <SearchBar />
     </header>
   );

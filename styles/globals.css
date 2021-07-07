@@ -38,6 +38,14 @@
     @apply text-black-60;
   }
 
+  .ms-focus-barbiePink {
+    @apply focus:outline-none focus-within:ring-2 ring-barbiePink-60 ring-opacity-70 active:ring-opacity-100 focus-within:border-barbiePink-100
+  }
+
+  .ms-focus-vividCerulean {
+    @apply focus:outline-none focus-within:ring-2 ring-vividCerulean-60 ring-opacity-70 active:ring-opacity-100 focus-within:border-vividCerulean-100
+  }
+
   @media (min-width: 768px) {
     h1 {
       font-size: 64px;
@@ -47,9 +55,6 @@
     }
     h3 {
       font-size: 28px;
-    }
-    h4 {
-      font-size: 24px;
     }
     h5 {
       font-size: 18px;
