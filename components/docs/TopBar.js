@@ -13,7 +13,7 @@ export default function TopBar({ structure, title, path, slug }) {
             <div className="flex lg:hidden">
               <DocsLogo />
             </div>
-            <Popover.Button className="h-full lg:hidden bg-white-off rounded-md border border-black-20 ms-focus-barbiePink">
+            <Popover.Button className="appearance-none h-full lg:hidden bg-white-off rounded-md border border-black-20 ms-focus-barbiePink">
               <MenuButton open={open} />
             </Popover.Button>
             <div className="hidden lg:flex w-full justify-end">
