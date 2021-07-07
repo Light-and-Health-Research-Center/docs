@@ -19,7 +19,6 @@ export default function Home({ cardData }) {
 
 export async function getStaticProps() {
   const cardData = getAllProductData();
-  console.log(JSON.stringify(cardData, null, 2));
   return {
     props: {
       cardData,
