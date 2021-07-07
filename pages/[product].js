@@ -23,7 +23,6 @@ export async function getStaticProps({}) {
 
 export async function getStaticPaths() {
   const paths = getProductPages();
-  console.log(paths);
   return {
     paths,
     fallback: false,
