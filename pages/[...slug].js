@@ -8,7 +8,6 @@ export default function slug({ productData, pageSlug }) {
 export async function getStaticProps({ params }) {
   const productData = getProductData(params.slug[0]);
   const pageSlug = params.slug;
-  console.log(pageSlug);
   return {
     props: {
       productData,

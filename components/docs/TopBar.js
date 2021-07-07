@@ -2,7 +2,7 @@ import DocsLogo from "./DocsLogo";
 import SearchBar from "../global/SearchBar";
 import MenuButton from "./MenuButton";
 import MobileNav from "./MobileNav";
-import { Popover, Transition } from "@headlessui/react";
+import { Popover } from "@headlessui/react";
 
 export default function TopBar({ structure, title, path, slug }) {
   return (
@@ -13,7 +13,7 @@ export default function TopBar({ structure, title, path, slug }) {
             <div className="flex lg:hidden">
               <DocsLogo />
             </div>
-            <Popover.Button as="div" className="h-full lg:hidden">
+            <Popover.Button as="div" className="h-full lg:hidden bg-white-100">
               <MenuButton open={open} />
             </Popover.Button>
             <div className="hidden lg:flex w-full justify-end">
