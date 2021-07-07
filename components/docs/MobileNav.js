@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function MobileNav({ structure, title, path, slug }) {
   return (
     <div className="bg-white-off p-4">
-      <div className="mx-auto h-16">
+      <div className="h-12 flex">
         <SearchBar center={true} />
       </div>
       <div className="pl-2 pt-6">
