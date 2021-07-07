@@ -12,7 +12,9 @@ export default function DocsLogo({ offwhite }) {
         <div>
           <MSLogo />
         </div>
-        <h4 className="my-auto pl-2">Light and Health Docs</h4>
+        <h4 className="my-auto pl-2 text-sm md:text-lg">
+          Light and Health Docs
+        </h4>
       </a>
     </Link>
   );
