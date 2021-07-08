@@ -40,14 +40,17 @@ export default function Breadcrumb({ structure, slug, title }) {
     <nav>
       {slug.map((_, idx) => (
         <Link href={hrefs[idx]} key={idx}>
-          <a className="inline-block">
-            <p
-              className={` ${
-                lastLink(idx) ? "" : "text-vividCerulean-80"
-              } text-sm`}
-            >
-              {" "}
-              {getText(idx)}
+          <a className="group inline-block focus:outline-none">
+            <p>
+              <span
+                className={` ${
+                  lastLink(idx)
+                    ? ""
+                    : "text-vividCerulean-80 group-hover:underline"
+                } text-sm group-active:text-vividCerulean-100 group-focus-visible:underline`}
+              >
+                {getText(idx)}
+              </span>
               <span
                 className={` ${
                   lastLink(idx) ? "hidden" : ""
