@@ -9,16 +9,12 @@ export default function MobileNav({ structure, title, path, slug }) {
         <SearchBar center={true} />
       </div>
       <div className="pl-2 pt-6">
-        <Link href={path}>
-          <a className="group focus:outline-none">
-            <div className="pb-2">
-              <p className="group-focus:text-vividCerulean-80 group-hover:text-vividCerulean-80 group-active:text-vividCerulean-100">
-                {title}
-              </p>
-            </div>
-          </a>
-        </Link>
-        <NavDisclosure structure={structure} path={path} slug={slug} />
+        <NavDisclosure
+          structure={structure}
+          title={title}
+          path={path}
+          slug={slug}
+        />
       </div>
     </div>
   );

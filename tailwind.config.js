@@ -66,9 +66,6 @@ module.exports = {
       screens: {
         _hover: { raw: "(hover: hover)" },
       },
-      transitionProperty: {
-        height: "max-height",
-      },
     },
   },
   variants: {

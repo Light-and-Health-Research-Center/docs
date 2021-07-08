@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import { Disclosure, Transition } from "@headlessui/react";
+import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/solid";
 
-export default function NavDisclosure({ structure, path, slug }) {
+export default function NavDisclosure({ structure, title, path, slug }) {
   function cleanPath(raw) {
     return raw.toLowerCase().replace(/\s/g, "-");
   }
@@ -13,7 +13,16 @@ export default function NavDisclosure({ structure, path, slug }) {
   }
 
   return (
-    <>
+    <nav>
+      <Link href={path}>
+        <a className="group focus:outline-none">
+          <div className="pb-2">
+            <p className="group-focus-visible:text-vividCerulean-80 group-hover:text-vividCerulean-80 group-active:text-vividCerulean-100">
+              {title}
+            </p>
+          </div>
+        </a>
+      </Link>
       {structure.map((menu) => (
         <Disclosure key={Object.keys(menu)[0]}>
           {({ open }) => (
@@ -21,7 +30,7 @@ export default function NavDisclosure({ structure, path, slug }) {
               <Disclosure.Button className="group flex justify-between w-full py-2 focus:outline-none">
                 <h6
                   className={
-                    "group-focus:text-cetaceanBlue-60 transition duration-250 ease-in-out group-hover:text-cetaceanBlue-60"
+                    "group-focus-visible:text-vividCerulean-80 transition-transform duration-250 ease-in-out group-hover:text-vividCerulean-80 group-hover:translate-x-1 group-active:text-vividCerulean-100"
                   }
                 >
                   {Object.keys(menu)[0]}
@@ -39,21 +48,25 @@ export default function NavDisclosure({ structure, path, slug }) {
                   )}`}
                   key={slug}
                 >
-                  <a className="group focus:outline-none">
+                  <a
+                    className={`group focus:outline-none ${
+                      open ? "" : "hidden"
+                    }`}
+                  >
                     <Disclosure.Panel>
                       <div
                         className={`${
                           active(slug)
-                            ? "border-l-2 border-vividCerulean-80"
+                            ? "border-l-4 border-vividCerulean-100"
                             : "border-l-2"
                         } p-2 py-1  cursor-pointer`}
                       >
                         <p
                           className={`${
                             active(slug)
-                              ? "text-vividCerulean-80 translate-x-1"
+                              ? "text-vividCerulean-100 translate-x-1"
                               : ""
-                          } text-sm transition-transform ease-in-out duration-250 border-vividCerulean-100 group-hover:text-vividCerulean-80 group-hover:translate-x-1 group-active:text-vividCerulean-100 group-focus:text-vividCerulean-100 group-focus:translate-x-1`}
+                          } text-sm transition-transform ease-in-out duration-250 group-hover:text-vividCerulean-80 group-hover:translate-x-1 group-active:text-vividCerulean-100 group-focus:text-vividCerulean-100 group-focus:translate-x-1`}
                         >
                           {slug}
                         </p>
@@ -66,6 +79,6 @@ export default function NavDisclosure({ structure, path, slug }) {
           )}
         </Disclosure>
       ))}
-    </>
+    </nav>
   );
 }
