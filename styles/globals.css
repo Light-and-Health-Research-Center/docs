@@ -11,8 +11,9 @@
     @apply text-cetaceanBlue-100;
   }
   h1 {
-    font-size: 48px;
-    font-weight: 700; /* Bold */
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 600; /* Semi-Bold */
   }
   h2 {
     font-size: 28px;
@@ -20,11 +21,11 @@
   }
   h3 {
     font-size: 24px;
-    font-weight: 700; /* Bold */
+    font-weight: 600; /* Semi-Bold */
   }
   h4 {
     font-size: 20px;
-    font-weight: 700; /* Bold */
+    font-weight: 600; /* Semi-Bold */
   }
   h5 {
     font-size: 16px;
@@ -32,7 +33,7 @@
   }
   h6 {
     font-size: 1rem;
-    font-weight: 600; /* Semi-bold */
+    font-weight: 500; 
   }
   p {
     font-size: 1rem;
@@ -48,9 +49,6 @@
   }
 
   @media (min-width: 768px) {
-    h1 {
-      font-size: 64px;
-    }
     h2 {
       font-size: 32px;
     }
@@ -60,5 +58,15 @@
     h5 {
       font-size: 18px;
     }
+  }
+}
+
+@layer components {
+  .content a{
+    @apply text-vividCerulean-80 hover:underline focus:outline-none focus-visible:underline active:text-vividCerulean-100;
+  }
+
+  .content li {
+    @apply my-1
   }
 }
