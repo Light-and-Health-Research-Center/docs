@@ -8,8 +8,9 @@ export default function Home({ cardData }) {
   return (
     <>
       <Head>
-        <title>Light and Health Docs | Light and Health Research Center</title>
-        <title key="head-title">Light and Health Docs</title>
+        <title key="head-title">
+          Light and Health Docs | Light and Health Research Center
+        </title>
         <meta
           name="description"
           content="Explore the resources and documentation the Light and Health Research Center has to offer."
@@ -27,7 +28,7 @@ export default function Home({ cardData }) {
         />
         <meta
           property="og:image"
-          content="/img/undraw/books.svg"
+          content={`https://docs.light-health.org/img/undraw/books.svg`}
           key="head-ogimage"
         ></meta>
         <meta
