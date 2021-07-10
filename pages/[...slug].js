@@ -1,13 +1,90 @@
-import { getSlugs, getProductData, getFrontMatter } from "../lib/docs";
+import {
+  getSlugs,
+  getProductData,
+  getFrontMatter,
+  getMdxSource,
+  getTOC,
+  getGithub,
+} from "../lib/docs";
 import Layout from "../components/docs/Layout";
+import Head from "next/head";
+import { MDXRemote } from "next-mdx-remote";
+import MDXComponents from "../components/MDXComponents";
 
-export default function slug({ productData, pageSlug, frontMatter }) {
+export default function slug({
+  productData,
+  pageSlug,
+  frontMatter,
+  mdxSource,
+  toc,
+  github,
+}) {
+  let rootDir = "https://docs.light-health.org";
   return (
-    <Layout
-      productData={productData}
-      pageSlug={pageSlug}
-      frontMatter={frontMatter}
-    ></Layout>
+    <>
+      <Head>
+        <title key="head-title">
+          {frontMatter.title} - {productData.product_title} | Light and Health
+          Docs
+        </title>
+        <meta
+          name="description"
+          content={`${frontMatter.title} - ${frontMatter.desc}`}
+          key="head-description"
+        />
+        <meta
+          property="og:title"
+          content={`${frontMatter.title} - ${productData.product_title} | Light and Health
+          Docs`}
+          key="head-ogtitle"
+        />
+        <meta
+          property="og:description"
+          content={`${frontMatter.title} - ${frontMatter.desc}`}
+          key="head-ogdescription"
+        />
+        <meta
+          property="og:image"
+          content={`${rootDir}${productData.product_img}`}
+          key="head-ogimage"
+        ></meta>
+        <meta
+          property="og:url"
+          content={`${rootDir}/${pageSlug.join("/")}`}
+          key="head-ogurl"
+        ></meta>
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+          key="head-twittercard"
+        ></meta>
+        <meta
+          name="twitter:image:alt"
+          content={productData.product_title}
+          key="head-twitterimgalt"
+        ></meta>
+        <meta
+          property="og:site_name"
+          content="Light and Health Docs"
+          key="head-ogsite_name"
+        ></meta>
+      </Head>
+      <Layout
+        productData={productData}
+        pageSlug={pageSlug}
+        frontMatter={frontMatter}
+        toc={toc}
+        github={github}
+      >
+        {frontMatter.pageType === "documentation" ? (
+          <div className="mdx">
+            <MDXRemote {...mdxSource} components={{ ...MDXComponents }} />
+          </div>
+        ) : (
+          <></>
+        )}
+      </Layout>
+    </>
   );
 }
 
@@ -15,11 +92,21 @@ export async function getStaticProps({ params }) {
   const productData = getProductData(params.slug[0]);
   const pageSlug = params.slug;
   const frontMatter = getFrontMatter(pageSlug);
+  const mdxSource =
+    frontMatter.pageType === "documentation"
+      ? await getMdxSource(pageSlug)
+      : "";
+  const toc = frontMatter.pageType === "documentation" ? getTOC(pageSlug) : "";
+  const github =
+    frontMatter.pageType === "documentation" ? await getGithub(pageSlug) : "";
   return {
     props: {
       productData,
       pageSlug,
       frontMatter,
+      mdxSource,
+      toc,
+      github,
     },
   };
 }

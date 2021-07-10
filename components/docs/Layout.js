@@ -2,22 +2,19 @@ import SideBar from "./SideBar";
 import TopBar from "./TopBar";
 import Breadcrumb from "./Breadcrumb";
 import MenuList from "./MenuList";
-import Head from "next/head";
+import TOC from "./TOC";
+import Github from "./Github";
 
 export default function Layout({
   productData,
   pageSlug,
   frontMatter,
+  toc,
+  github,
   children,
 }) {
   return (
     <div className="flex">
-      <Head>
-        <title key="title">
-          {frontMatter.title} - {productData.product_title} | Light and Health
-          Docs
-        </title>
-      </Head>
       <a className="sr-only" href="#main">
         Skip to Main Content
       </a>
@@ -34,7 +31,10 @@ export default function Layout({
           path={productData.path}
           slug={pageSlug}
         />
-        <main id="main" className="p-4 md:p-8 lg:p-12">
+        <main
+          id="main"
+          className="p-4 md:p-8 lg:p-12  max-w-screen-md xl:max-w-screen-xl xl:mx-auto"
+        >
           <Breadcrumb
             structure={productData.structure}
             slug={pageSlug}
@@ -42,16 +42,22 @@ export default function Layout({
           />
           <div
             id="#content"
-            className="content py-4 my-2 md:pt-4 lg:pt-8 grid grid-cols-12"
+            className="content py-4 my-2 grid gap-12 grid-cols-12"
           >
-            <div
-              className={`${
-                frontMatter.isData ? "" : "xl:col-span-8"
-              } col-span-12`}
-            >
-              <div className="mb-4 border-b">
+            <div className="xl:col-span-8 col-span-12 lg:pt-8">
+              <div className="mb-8 border-b">
                 <h1 className="mb-6">{frontMatter.title}</h1>
                 <h6 className="text-black-60 mb-4">{frontMatter.desc}</h6>
+                {!frontMatter.isData && (
+                  <>
+                    <div className="xl:hidden">
+                      <TOC toc={toc} />
+                    </div>
+                    <div>
+                      <Github github={github} />
+                    </div>
+                  </>
+                )}
               </div>
 
               {frontMatter.pageType == "menu" && (
@@ -60,7 +66,9 @@ export default function Layout({
               {children}
             </div>
             {!frontMatter.isData && (
-              <div className="col-span-12 xl:col-span-4">right</div>
+              <div className="col-span-12 xl:col-span-4">
+                <TOC toc={toc} sticky={true} />
+              </div>
             )}
           </div>
         </main>

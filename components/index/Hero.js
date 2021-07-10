@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="md:flex">
         <div className="md:m-auto md:mt-12">
           <h5 className="text-barbiePink-100 w-2/4">docs.light-health.org</h5>
-          <h1 className="text-4xl md:text-7xl font-bold">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
             Light and Health Docs
           </h1>
           <p>

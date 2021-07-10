@@ -1,4 +1,16 @@
 ---
-title: "New CS model"
-desc: "New CS model desc"
+title: "Notes on the new CS model"
+desc: "Some notes regarding the changes to the CS model used to perform calculations with the new CS Calculator 2.0, with respect to the original CS Calculator."
 ---
+
+## Instrument calibration for CL<sub>A</sub>
+
+The revised model (Rea et al., 2021a,b) involved optimization of the CLA spectral sensitivity framework, and was designed to (a) maintain the relationship between CS and predicted nocturnal melatonin suppression (e.g., CS of 0.5 results in 50% nocturnal melatonin suppression following a reference light exposure duration of 1 hour ) and to (b) maintain the original model coefficients (Rea et al., 2005) from the CS operating characteristic. In the original model, 1000 lux of CIE Illuminant A resulted in a CLA = 1000. In the revised model, a photopic illuminance of 1000 lux from CIE Illuminant A (approximately that of an incandescent lamp operated at 2856 K) results in a CLA 2.0 = 813. The value of 813 CLA 2.0 should be used by those wishing to calibrate instrumentation designed to report CLA 2.0 and CS. CLA 2.0 values can still be used to approximate the photopic illuminance, in lux, from a nonspecific "white" light source. For comparison, CLA 2.0 values should be multiplied by 1.23 to estimate the equivalent photopic illuminance from CIE Illuminant A, or by 0.66 to estimate the equivalent photopic illuminance from CIE Illuminant D65 (an approximation of daylight with a correlated color temperature of 6500 K).
+
+## Photoreceptor fundamentals
+
+For the revised model (Rea et al. 2021a,b), the optimization of spectral sensitivity was performed using fundamentals that differed slightly from those recommended in CIE S 026 (CIE 2015a,b) for S-cone and melanopsin. Using the CIE S-cone fundamental for the optimization had negligible effect on the accuracy of predictions for both broadband and narrowband light sources. To characterize the action spectrum for melanopsin, we used the template published by Wyszecki and Stiles (1982) with an in vivo (filtered by the crystalline lens) peak sensitivity at 485 nm and a half-maxim sensitivity of 89 nm. The CIE on the other hand used the template from Govardovskii et al. (2000) with a peak sensitivity of 490 nm and a half-maximum sensitivity of 84 nm. Using the CIE melanopsin template for the model optimization did not affect the optimization process for broadband sources, however, the prediction accuracy for narrowband sources was significantly worse. Thus, the Wyszecki and Stiles (1982) template appears to be better than that from Govardovskii et al. (2000) in characterizing the in vivo action spectrum of melanopsin. The revised model indirectly tests the utility of the CIE S 026 melanopic function for modeling the spectral sensitivity of the human circadian system.
+
+## Photoreceptor action spectra normalization
+
+The four photoreceptor action spectra in the CLA equation (M(λ), V(λ), V’(λ) and S-cone(λ)) are all unitless weighting functions, each normalized to have a maximum value of 1. These action spectra represent in-vivo photoreceptor spectral sensitivities including the effects of preretinal filtering by the eye (e.g., lens absorption). Thus, the CIE photopic and scotopic luminous efficiency functions (V(λ) and V’(λ), can be used to represent the spectral sensitivity of the L-cone + M-cone achromatic channel and rod achromatic channel, respectively. However, after adjusting the 480 nm opsin response representing melanopsin for lens transmission and removing macular pigment filtering from the S-cone fundamental, these photoreceptor action spectra needed to be renormalized to have a maximum value of 1.0.

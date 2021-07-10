@@ -46,8 +46,8 @@ export default function Breadcrumb({ structure, slug, title }) {
                 className={` ${
                   lastLink(idx)
                     ? ""
-                    : "text-vividCerulean-80 group-hover:underline"
-                } text-sm group-active:text-vividCerulean-100 group-focus-visible:underline`}
+                    : "text-vividCerulean-100 group-hover:underline"
+                } text-sm group-active:text-vividCerulean-80 group-focus-visible:underline`}
               >
                 {getText(idx)}
               </span>

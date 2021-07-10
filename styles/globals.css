@@ -41,32 +41,55 @@
   }
 
   .ms-focus-barbiePink {
-    @apply focus:outline-none focus-within:ring-2 ring-barbiePink-60 ring-opacity-70 active:ring-opacity-100 focus-within:border-barbiePink-100
+    @apply focus:outline-none focus-within:ring-2 ring-barbiePink-60 ring-opacity-70 active:ring-opacity-100 focus-within:border-barbiePink-100;
   }
 
   .ms-focus-vividCerulean {
-    @apply focus:outline-none focus-within:ring-2 ring-vividCerulean-60 ring-opacity-70 active:ring-opacity-100 focus-within:border-vividCerulean-100
-  }
-
-  @media (min-width: 768px) {
-    h2 {
-      font-size: 32px;
-    }
-    h3 {
-      font-size: 28px;
-    }
-    h5 {
-      font-size: 18px;
-    }
+    @apply focus:outline-none focus-within:ring-2 ring-vividCerulean-60 ring-opacity-70 active:ring-opacity-100 focus-within:border-vividCerulean-100;
   }
 }
 
 @layer components {
   .content a{
-    @apply text-vividCerulean-80 hover:underline focus:outline-none focus-visible:underline active:text-vividCerulean-100;
+    @apply text-vividCerulean-100 hover:underline focus:outline-none focus-visible:underline active:text-vividCerulean-80;
   }
 
   .content li {
-    @apply my-1
+    @apply my-1;
   }
+
+  .content .github {
+    @apply text-black-80 text-sm hover:text-vividCerulean-100
+  }
+
+  .mdx h2 {
+    font-size: 22px;
+    font-weight: 500; /* Semi-bold */
+    @apply py-2 mt-6;
+  }
+
+  .mdx h3 {
+    font-size: 20px;
+    font-weight: 600; /* Semi-Bold */
+  }
+
+  .mdx h4 {
+    font-size: 18px;
+    font-weight: 600; /* Semi-Bold */
+  }
+
+  .mdx h5 {
+    font-size: 16px;
+    font-weight: 600; /* Semi-bold */
+  }
+
+  .mdx h6 {
+    font-size: 1rem;
+    font-weight: 500; 
+  }
+
+  .mdx p {
+    @apply text-black-80;
+  }
+
 }
