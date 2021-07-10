@@ -43,7 +43,7 @@ export default function slug({
         />
         <meta
           property="og:image"
-          content={`${rootDit}/img/undraw/books.jpg`}
+          content={`${rootDir}/img/undraw/books.jpg`}
           key="head-ogimage"
         ></meta>
         <meta
