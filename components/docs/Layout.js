@@ -68,7 +68,7 @@ export default function Layout({
               {children}
             </div>
             {!frontMatter.isData && (
-              <div className="hidden xl:col-span-4">
+              <div className="hidden xl:col-span-4 xl:block">
                 <TOC toc={toc} sticky={true} />
               </div>
             )}
