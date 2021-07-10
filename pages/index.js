@@ -28,7 +28,7 @@ export default function Home({ cardData }) {
         />
         <meta
           property="og:image"
-          content={`https://docs.light-health.org/img/undraw/books.svg`}
+          content={`https://docs.light-health.org/img/undraw/books.jpg`}
           key="head-ogimage"
         ></meta>
         <meta
