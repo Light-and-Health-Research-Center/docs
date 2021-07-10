@@ -59,7 +59,7 @@
   }
 
   .content .github {
-    @apply text-black-80 text-sm hover:text-vividCerulean-100
+    @apply text-black-60 text-sm hover:text-vividCerulean-100
   }
 
   .mdx h2 {

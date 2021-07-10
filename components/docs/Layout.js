@@ -42,12 +42,14 @@ export default function Layout({
           />
           <div
             id="#content"
-            className="content py-4 my-2 grid gap-12 grid-cols-12"
+            className="content py-4 my-2 grid xl:gap-12 grid-cols-12"
           >
             <div className="xl:col-span-8 col-span-12 lg:pt-8">
               <div className="mb-8 border-b">
                 <h1 className="mb-6">{frontMatter.title}</h1>
-                <h6 className="text-black-60 mb-4">{frontMatter.desc}</h6>
+                <h6 className="text-black-60 mb-4 text-lg">
+                  {frontMatter.desc}
+                </h6>
                 {!frontMatter.isData && (
                   <>
                     <div className="xl:hidden">

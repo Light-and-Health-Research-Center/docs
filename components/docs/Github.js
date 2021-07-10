@@ -17,12 +17,11 @@ export default function Github({ github }) {
     "December",
   ];
   const date = new Date(github.date);
-  console.log(date);
   const link = github.link;
   return (
     <div className="mt-8">
       <Link href={link}>
-        <a className="github">
+        <a target="_blank" className="github">
           <span className="mr-2">
             <Octicon icon={markGithub} />
           </span>
