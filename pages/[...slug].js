@@ -43,7 +43,7 @@ export default function slug({
         />
         <meta
           property="og:image"
-          content={`${rootDir}${productData.product_img}`}
+          content={`${rootDit}/img/undraw/books.jpg`}
           key="head-ogimage"
         ></meta>
         <meta
@@ -58,7 +58,7 @@ export default function slug({
         ></meta>
         <meta
           name="twitter:image:alt"
-          content={productData.product_title}
+          content="Girl reading books"
           key="head-twitterimgalt"
         ></meta>
         <meta
