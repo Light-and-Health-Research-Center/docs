@@ -9,6 +9,47 @@ export default function Home({ cardData }) {
     <>
       <Head>
         <title>Light and Health Docs | Light and Health Research Center</title>
+        <title key="head-title">Light and Health Docs</title>
+        <meta
+          name="description"
+          content="Explore the resources and documentation the Light and Health Research Center has to offer."
+          key="head-description"
+        />
+        <meta
+          property="og:title"
+          content="Light and Health Docs"
+          key="head-ogtitle"
+        />
+        <meta
+          property="og:description"
+          content="Explore the resources and documentation the Light and Health Research Center has to offer."
+          key="head-ogdescription"
+        />
+        <meta
+          property="og:image"
+          content="/img/undraw/books.svg"
+          key="head-ogimage"
+        ></meta>
+        <meta
+          property="og:url"
+          content="https://docs.light-health.org"
+          key="head-ogurl"
+        ></meta>
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+          key="head-twittercard"
+        ></meta>
+        <meta
+          name="twitter:image:alt"
+          content="Girl reading books"
+          key="head-twitterimgalt"
+        ></meta>
+        <meta
+          property="og:site_name"
+          content="Light and Health Docs"
+          key="head-ogsite_name"
+        ></meta>
       </Head>
       <TopBar />
       <Hero />

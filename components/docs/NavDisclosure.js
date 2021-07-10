@@ -30,7 +30,7 @@ export default function NavDisclosure({ structure, title, path, slug }) {
               <Disclosure.Button className="group flex justify-between w-full py-2 focus:outline-none">
                 <h6
                   className={
-                    "group-focus-visible:text-vividCerulean-80 transition-transform duration-250 ease-in-out group-hover:text-vividCerulean-80 group-hover:translate-x-1 group-active:text-vividCerulean-100"
+                    "group-focus-visible:text-barbiePink-80 transition-transform duration-250 ease-in-out group-hover:text-barbiePink-80 group-hover:translate-x-1 group-active:text-barbiePink-100"
                   }
                 >
                   {Object.keys(menu)[0]}
@@ -57,16 +57,16 @@ export default function NavDisclosure({ structure, title, path, slug }) {
                       <div
                         className={`${
                           active(slug)
-                            ? "border-l-4 border-vividCerulean-100"
+                            ? "border-l-4 border-barbiePink-100"
                             : "border-l-2"
                         } p-2 py-1  cursor-pointer`}
                       >
                         <p
                           className={`${
                             active(slug)
-                              ? "text-vividCerulean-100 translate-x-1"
+                              ? "text-barbiePink-100 translate-x-1"
                               : ""
-                          } text-sm transition-transform ease-in-out duration-250 group-hover:text-vividCerulean-80 group-hover:translate-x-1 group-active:text-vividCerulean-100 group-focus:text-vividCerulean-100 group-focus:translate-x-1`}
+                          } text-sm transition-transform ease-in-out duration-250 group-hover:text-barbiePink-80 group-hover:translate-x-1 group-active:text-barbiePink-100 group-focus:text-barbiePink-100 group-focus:translate-x-1`}
                         >
                           {slug}
                         </p>
