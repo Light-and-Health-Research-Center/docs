@@ -4,6 +4,7 @@ import Breadcrumb from "./Breadcrumb";
 import MenuList from "./MenuList";
 import TOC from "./TOC";
 import Github from "./Github";
+import Footer from "../global/Footer";
 
 export default function Layout({
   productData,
@@ -33,7 +34,7 @@ export default function Layout({
         />
         <main
           id="main"
-          className="p-4 md:p-8 lg:p-12  max-w-screen-md xl:max-w-screen-xl xl:mx-auto"
+          className="p-4 pb-0 md:p-8 md:pb-0 lg:p-12 lg:pb-0  max-w-screen-md xl:max-w-screen-xl xl:mx-auto"
         >
           <Breadcrumb
             structure={productData.structure}
@@ -42,7 +43,7 @@ export default function Layout({
           />
           <div
             id="#content"
-            className="content py-4 my-2 grid xl:gap-12 grid-cols-12"
+            className="content pt-4 mt-2 grid xl:gap-12 grid-cols-12"
           >
             <div className="xl:col-span-8 col-span-12 lg:pt-8">
               <div className="mb-4 border-b">
@@ -66,6 +67,7 @@ export default function Layout({
                 <MenuList list={frontMatter.list} />
               )}
               {children}
+              <Footer />
             </div>
             {!frontMatter.isData && (
               <div className="hidden xl:col-span-4 xl:block">

@@ -3,6 +3,7 @@ import Hero from "../components/index/Hero";
 import TopBar from "../components/index/TopBar";
 import CardSection from "../components/index/CardSection";
 import { getAllProductData } from "../lib/docs";
+import Footer from "../components/global/Footer";
 
 export default function Home({ cardData }) {
   return (
@@ -55,6 +56,7 @@ export default function Home({ cardData }) {
       <TopBar />
       <Hero />
       <CardSection data={cardData} />
+      <Footer />
     </>
   );
 }
