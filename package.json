@@ -6,6 +6,7 @@
     "lint": "next lint",
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "mdx-bundler": "^5.0.0",
     "next": "latest",
     "next-mdx-remote": "^3.0.2",
+    "next-sitemap": "^1.6.133",
     "octicons-react": "^1.0.9",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
