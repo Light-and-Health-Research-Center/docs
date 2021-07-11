@@ -65,7 +65,7 @@
   .mdx h2 {
     font-size: 22px;
     font-weight: 500; /* Semi-bold */
-    @apply py-2 mt-6;
+    @apply pt-4 my-4;
   }
 
   .mdx h3 {
@@ -88,8 +88,25 @@
     font-weight: 500; 
   }
 
-  .mdx p {
-    @apply text-black-80;
+
+  .mdx h1, .mdx h2, .mdx h3, .mdx h4, .mdx h5, .mdx h6, .mdx p, .mdx ul, .mdx ol {
+    @apply mb-4 leading-6;
+  }
+
+  .mdx p, .mdx ul, .mdx ol {
+    @apply text-black-85;
+  }
+
+  .mdx ul, .mdx ol {
+    @apply pl-8;
+  }
+
+  .mdx ul {
+    @apply list-disc;
+  }
+
+  .mdx ol {
+    @apply list-decimal;
   }
 
 }
