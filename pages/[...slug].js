@@ -9,7 +9,7 @@ import {
 import Layout from "../components/docs/Layout";
 import Head from "next/head";
 import { MDXRemote } from "next-mdx-remote";
-import MDXComponents from "../components/MDXComponents";
+import MDXComponents from "../components/markdown/MDXComponents";
 
 export default function slug({
   productData,

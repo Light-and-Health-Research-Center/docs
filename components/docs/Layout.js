@@ -45,7 +45,7 @@ export default function Layout({
             className="content py-4 my-2 grid xl:gap-12 grid-cols-12"
           >
             <div className="xl:col-span-8 col-span-12 lg:pt-8">
-              <div className="mb-8 border-b">
+              <div className="mb-4 border-b">
                 <h1 className="mb-6">{frontMatter.title}</h1>
                 <h6 className="text-black-60 mb-4 text-lg">
                   {frontMatter.desc}
