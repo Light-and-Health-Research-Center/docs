@@ -9,8 +9,8 @@ assignees: ''
 
 ## 404 Error
 
-### URL of missing page(s)
+#### URL of missing page(s)
 - https://docs.light-health.org/[missing-page]
 
-### URL of page(s) that linked to missing page(s)
+#### URL of page(s) that linked to missing page(s)
 - https://docs.light-health.org/[page-that-links-to-missing-page]
