@@ -1,7 +1,7 @@
 ---
 name: 404 Error | Page not found
 about: Reporting 404 Errors.
-title: "[404] -[missing-page-url]"
+title: 404 Error - [missing-page-url]
 labels: ''
 assignees: ''
 
