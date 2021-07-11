@@ -1,21 +1,26 @@
 import Link from "next/link";
 import MSLogo from "../global/MSLogo";
 
-export default function DocsLogo({ offwhite }) {
+export default function DocsLogo({ offwhite, img_width }) {
   return (
-    <Link href="/">
-      <a
-        className={`flex rounded-sm ms-focus-barbiePink ring-offset-4 ${
-          offwhite ? "ring-offset-white-off" : ""
-        }`}
-      >
-        <div>
-          <MSLogo />
-        </div>
-        <h4 className="my-auto pl-2 text-base xs:text-xl">
-          Light and Health Docs
-        </h4>
-      </a>
-    </Link>
+    <div>
+      <div className="flex h-full">
+        <Link href="/">
+          <a
+            className={`flex rounded-sm ms-focus-barbiePink ring-offset-4 ${
+              offwhite ? "ring-offset-white-off" : ""
+            }`}
+          >
+            <div className={`h-auto ${img_width}`}>
+              <MSLogo />
+            </div>
+
+            <h4 className="my-auto pl-2 text-base xs:text-xl">
+              Light and Health Docs
+            </h4>
+          </a>
+        </Link>
+      </div>
+    </div>
   );
 }

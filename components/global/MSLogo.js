@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function MSLogo() {
   return (
-    <div className="relative h-full w-20">
+    <div className="relative h-full w-auto">
       <Image
         className="cursor-pointer"
         src={msLogo}
