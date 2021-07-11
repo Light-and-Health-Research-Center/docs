@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "postinstall": "husky install",
     "lint": "next lint",
     "dev": "next dev",
     "build": "next build",
