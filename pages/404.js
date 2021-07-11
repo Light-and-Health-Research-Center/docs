@@ -22,6 +22,7 @@ export default function Custom404() {
                 <a
                   className="text-vividCerulean-100 hover:underline focus:outline-none focus-visible:underline active:text-vividCerulean-80"
                   target="_blank"
+                  rel="noreferrer"
                   href="https://github.com/Light-and-Health-Research-Center/docs/issues/new"
                 >
                   submit an issue on Github
@@ -30,6 +31,7 @@ export default function Custom404() {
                 <a
                   className="text-vividCerulean-100 hover:underline focus:outline-none focus-visible:underline active:text-vividCerulean-80"
                   target="_blank"
+                  rel="noreferrer"
                   href="mailto:michael.morrison@mountsinai.org"
                 >
                   {" "}
