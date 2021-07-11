@@ -68,7 +68,7 @@ export default function Custom404() {
                     className="text-vividCerulean-100 hover:underline focus:outline-none focus-visible:underline active:text-vividCerulean-80"
                     target="_blank"
                     rel="noreferrer"
-                    href="https://github.com/Light-and-Health-Research-Center/docs/issues/new"
+                    href="https://github.com/Light-and-Health-Research-Center/docs/issues/new?template=404-error---page-not-found.md&title=404+Error+-+[missing-page-url]"
                   >
                     submit an issue on Github
                   </a>{" "}
@@ -77,7 +77,7 @@ export default function Custom404() {
                     className="text-vividCerulean-100 hover:underline focus:outline-none focus-visible:underline active:text-vividCerulean-80"
                     target="_blank"
                     rel="noreferrer"
-                    href="mailto:michael.morrison@mountsinai.org"
+                    href="mailto:michael.morrison@mountsinai.org?subject=docs 404&body=URL of missing page(s)%0d%0a - https://docs.light-health.org/[missing-page]%0d%0a%0d%0aURL of page(s) that linked to missing page(s)%0d%0a- https://docs.light-health.org/[page-that-links-to-missing-page]."
                   >
                     {" "}
                     send us an email
