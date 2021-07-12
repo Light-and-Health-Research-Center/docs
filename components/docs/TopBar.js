@@ -19,7 +19,7 @@ export default function TopBar({ structure, title, path, slug }) {
               <MenuButton open={open} />
             </Popover.Button>
             <div className="hidden lg:flex w-full justify-end">
-              <SearchBar searchRef={searchContext.searchRef} />
+              <SearchBar />
             </div>
           </div>
           <Popover.Panel className="h-full lg:hidden overflow-hidden">
