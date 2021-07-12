@@ -6,7 +6,7 @@ import {
   useRef,
 } from "react";
 
-const SearchContext = createContext();
+const SearchContext = createContext({});
 
 export function useSearch() {
   return useContext(SearchContext);
@@ -45,7 +45,7 @@ export function SearchProvider({ children }) {
       setDialogOpen(false);
       window.removeEventListener("click", onClick);
     }
-  });
+  }, []);
 
   const value = {
     searchRef,

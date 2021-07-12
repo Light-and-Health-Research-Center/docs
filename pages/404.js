@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Logistics from "../components/undraw/Logistics";
 import TopBar from "../components/index/TopBar";
+import SearchResultsDialog from "../components/global/SearchResultsDialog";
+import { SearchProvider } from "../components/global/SearchContext";
 
 export default function Custom404() {
   const rootDir = "https://docs.light-health.org";
@@ -50,7 +52,10 @@ export default function Custom404() {
         ></meta>
       </Head>
       <div className="h-screen">
-        <TopBar />
+        <SearchProvider>
+          <TopBar />
+          <SearchResultsDialog supportMobile />
+        </SearchProvider>
         <div className="flex flex-wrap content-center m-8">
           <div className="lg:flex mx-auto">
             <div className="lg:m-8">

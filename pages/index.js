@@ -5,6 +5,7 @@ import CardSection from "../components/index/CardSection";
 import { getAllProductData } from "../lib/docs";
 import Footer from "../components/global/Footer";
 import { SearchProvider } from "../components/global/SearchContext";
+import SearchResultsDialog from "../components/global/SearchResultsDialog";
 
 export default function Home({ cardData }) {
   return (
@@ -56,6 +57,7 @@ export default function Home({ cardData }) {
       </Head>
       <SearchProvider>
         <TopBar />
+        <SearchResultsDialog supportMobile />
         <Hero />
         <CardSection data={cardData} />
         <Footer />

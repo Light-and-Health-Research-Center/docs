@@ -48,7 +48,7 @@ export default function Layout({
           path={productData.path}
           slug={pageSlug}
         />
-        <SearchResultsDialog topBorder={false} />
+        <SearchResultsDialog />
         <main
           id="main"
           className="p-4 pb-0 md:p-8 md:pb-0 lg:p-12 lg:pb-0  max-w-screen-md xl:max-w-screen-xl xl:mx-auto"
