@@ -34,18 +34,18 @@ export function SearchProvider({ children }) {
     }
   }, []);
 
-  const onFocus = useCallback(() => {
-    setActive(true);
-    setDialogOpen(true);
-    window.addEventListener("click", onClick);
-  }, [onClick]);
-
   const onClick = useCallback((event) => {
     if (searchRef.current && !searchRef.current.contains(event.target)) {
       setDialogOpen(false);
       window.removeEventListener("click", onClick);
     }
   }, []);
+
+  const onFocus = useCallback(() => {
+    setActive(true);
+    setDialogOpen(true);
+    window.addEventListener("click", onClick);
+  }, [onClick]);
 
   const value = {
     searchRef,
