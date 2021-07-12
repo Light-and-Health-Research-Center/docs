@@ -13,7 +13,7 @@ export default function MobileNav({ structure, title, path, slug }) {
 
       <div className="pl-2 pt-2">
         {searchContext.active && searchContext.results.length > 0 && (
-          <SearchResults topBorder={true} />
+          <SearchResults topBorder={true} searchRef={searchContext.searchRef} />
         )}
         {!(searchContext.active && searchContext.results.length > 0) && (
           <NavDisclosure

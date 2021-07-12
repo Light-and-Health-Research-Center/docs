@@ -3,8 +3,10 @@ import SearchBar from "../global/SearchBar";
 import MenuButton from "./MenuButton";
 import MobileNav from "./MobileNav";
 import { Popover } from "@headlessui/react";
+import { useSearch } from "../global/SearchContext";
 
 export default function TopBar({ structure, title, path, slug }) {
+  const searchContext = useSearch();
   return (
     <Popover>
       {({ open }) => (
@@ -17,7 +19,7 @@ export default function TopBar({ structure, title, path, slug }) {
               <MenuButton open={open} />
             </Popover.Button>
             <div className="hidden lg:flex w-full justify-end">
-              <SearchBar />
+              <SearchBar searchRef={searchContext.searchRef} />
             </div>
           </div>
           <Popover.Panel className="h-full lg:hidden overflow-hidden">
