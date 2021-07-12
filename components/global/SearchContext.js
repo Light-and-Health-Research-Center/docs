@@ -38,7 +38,7 @@ export function SearchProvider({ children }) {
     setActive(true);
     setDialogOpen(true);
     window.addEventListener("click", onClick);
-  }, []);
+  }, [onClick]);
 
   const onClick = useCallback((event) => {
     if (searchRef.current && !searchRef.current.contains(event.target)) {

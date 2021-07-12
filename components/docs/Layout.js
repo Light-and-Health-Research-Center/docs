@@ -28,6 +28,7 @@ export default function Layout({
     searchContext.setResults([]);
     searchContext.setDialogWaitToClose(false);
     toFocus.current.focus();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   return (
