@@ -1,5 +1,4 @@
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
-import { useState } from "react";
 
 export default function MenuButton({ open }) {
   return (

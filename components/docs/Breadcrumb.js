@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Breadcrumb({ structure, slug, title }) {
+export default function Breadcrumb({ toFocus, structure, slug, title }) {
   function getText(idx) {
     if (idx === 0) return title;
     if (idx === 1) {
@@ -39,8 +39,11 @@ export default function Breadcrumb({ structure, slug, title }) {
   return (
     <nav>
       {slug.map((_, idx) => (
-        <Link href={hrefs[idx]} key={idx}>
-          <a className="group inline-block focus:outline-none">
+        <Link href={hrefs[idx]} key={hrefs[idx]}>
+          <a
+            ref={idx == 0 ? toFocus : null}
+            className="group inline-block focus:outline-none"
+          >
             <p>
               <span
                 className={` ${

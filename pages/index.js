@@ -4,6 +4,7 @@ import TopBar from "../components/index/TopBar";
 import CardSection from "../components/index/CardSection";
 import { getAllProductData } from "../lib/docs";
 import Footer from "../components/global/Footer";
+import { SearchProvider } from "../components/global/SearchContext";
 
 export default function Home({ cardData }) {
   return (
@@ -53,10 +54,12 @@ export default function Home({ cardData }) {
           key="head-ogsite_name"
         ></meta>
       </Head>
-      <TopBar />
-      <Hero />
-      <CardSection data={cardData} />
-      <Footer />
+      <SearchProvider>
+        <TopBar />
+        <Hero />
+        <CardSection data={cardData} />
+        <Footer />
+      </SearchProvider>
     </>
   );
 }

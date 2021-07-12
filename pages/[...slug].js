@@ -10,6 +10,7 @@ import Layout from "../components/docs/Layout";
 import Head from "next/head";
 import { MDXRemote } from "next-mdx-remote";
 import MDXComponents from "../components/markdown/MDXComponents";
+import { SearchProvider } from "../components/global/SearchContext";
 
 export default function slug({
   productData,
@@ -67,21 +68,23 @@ export default function slug({
           key="head-ogsite_name"
         ></meta>
       </Head>
-      <Layout
-        productData={productData}
-        pageSlug={pageSlug}
-        frontMatter={frontMatter}
-        toc={toc}
-        github={github}
-      >
-        {frontMatter.pageType === "documentation" ? (
-          <div className="mdx">
-            <MDXRemote {...mdxSource} components={{ ...MDXComponents }} />
-          </div>
-        ) : (
-          <></>
-        )}
-      </Layout>
+      <SearchProvider>
+        <Layout
+          productData={productData}
+          pageSlug={pageSlug}
+          frontMatter={frontMatter}
+          toc={toc}
+          github={github}
+        >
+          {frontMatter.pageType === "documentation" ? (
+            <div className="mdx">
+              <MDXRemote {...mdxSource} components={{ ...MDXComponents }} />
+            </div>
+          ) : (
+            <></>
+          )}
+        </Layout>
+      </SearchProvider>
     </>
   );
 }

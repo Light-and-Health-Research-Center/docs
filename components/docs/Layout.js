@@ -5,6 +5,10 @@ import MenuList from "./MenuList";
 import TOC from "./TOC";
 import Github from "./Github";
 import Footer from "../global/Footer";
+import { useRef, useEffect } from "react";
+import { useRouter } from "next/router";
+import { useSearch } from "../global/SearchContext";
+import SearchResultsDialog from "../global/SearchResultsDialog";
 
 export default function Layout({
   productData,
@@ -14,6 +18,18 @@ export default function Layout({
   github,
   children,
 }) {
+  const searchContext = useSearch();
+  let toFocus = useRef(null);
+  let page = useRouter();
+
+  useEffect(() => {
+    searchContext.setQuery("");
+    searchContext.setActive(false);
+    searchContext.setResults([]);
+    searchContext.setDialogWaitToClose(false);
+    toFocus.current.focus();
+  }, [page]);
+
   return (
     <div className="flex">
       <a className="sr-only" href="#main">
@@ -32,11 +48,13 @@ export default function Layout({
           path={productData.path}
           slug={pageSlug}
         />
+        <SearchResultsDialog topBorder={false} />
         <main
           id="main"
           className="p-4 pb-0 md:p-8 md:pb-0 lg:p-12 lg:pb-0  max-w-screen-md xl:max-w-screen-xl xl:mx-auto"
         >
           <Breadcrumb
+            toFocus={toFocus}
             structure={productData.structure}
             slug={pageSlug}
             title={productData.product_title}
