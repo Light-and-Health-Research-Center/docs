@@ -12,7 +12,7 @@ export default function SearchResultsDialog({ supportMobile }) {
             <div
               className={` ${
                 supportMobile ? "" : "hidden"
-              } lg:block fixed top-0 h-full w-full pointer-events-none bg-white-100 bg-opacity-50 z-10`}
+              } lg:block fixed top-0 h-full w-full pointer-events-none bg-white-100 bg-opacity-75 z-10`}
             ></div>
             <div
               className={`${

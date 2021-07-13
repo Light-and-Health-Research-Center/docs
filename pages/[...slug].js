@@ -76,8 +76,9 @@ export default function slug({
           toc={toc}
           github={github}
         >
-          {frontMatter.pageType === "documentation" ? (
-            <div className="mdx">
+          {frontMatter.pageType === "product" ||
+          frontMatter.pageType === "documentation" ? (
+            <div className="mdx mb-4">
               <MDXRemote {...mdxSource} components={{ ...MDXComponents }} />
             </div>
           ) : (
@@ -92,10 +93,12 @@ export default function slug({
 export async function getStaticProps({ params }) {
   const productData = getProductData(params.slug[0]);
   const pageSlug = params.slug;
-  const frontMatter = getFrontMatter(pageSlug);
+  const frontMatter = getFrontMatter(pageSlug, productData.tree);
+  // console.log("frontMatter" + JSON.stringify(frontMatter, null, 2));
   const mdxSource =
+    frontMatter.pageType === "product" ||
     frontMatter.pageType === "documentation"
-      ? await getMdxSource(pageSlug)
+      ? await getMdxSource(pageSlug, frontMatter.pageType)
       : "";
   const toc = frontMatter.pageType === "documentation" ? getTOC(pageSlug) : "";
   const github =

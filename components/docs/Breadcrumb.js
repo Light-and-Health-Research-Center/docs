@@ -50,7 +50,7 @@ export default function Breadcrumb({ toFocus, structure, slug, title }) {
                   lastLink(idx)
                     ? ""
                     : "text-vividCerulean-100 group-hover:underline"
-                } text-sm group-active:text-vividCerulean-80 group-focus-visible:underline`}
+                } text-sm group-active:text-vividCerulean-60 group-focus-visible:underline`}
               >
                 {getText(idx)}
               </span>

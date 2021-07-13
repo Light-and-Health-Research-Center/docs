@@ -6,7 +6,7 @@ export default function TOC({ toc, sticky }) {
         {toc.map((heading) => (
           <li key={heading.text}>
             <a
-              className="text-sm"
+              className="text-sm focus:outline-none text-vividCerulean-100 hover:underline focus:underline active:text-vividCerulean-80"
               href={heading.link}
               dangerouslySetInnerHTML={{ __html: heading.text }}
             ></a>

@@ -348,6 +348,13 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.0.tgz#87de7af9c231826fdd68ac7258f77c429e0e5fcf"
   integrity sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==
 
+"@icons-pack/react-simple-icons@^4.6.1":
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/@icons-pack/react-simple-icons/-/react-simple-icons-4.6.1.tgz#47e07a43ff90ce3ff7d64806cdac76fa68b986fc"
+  integrity sha512-ICONbofFzeTkXvmbnptDv4P9cqtW/N/8EFOqyzJQJ80b8fJoLzqhM7EKslBmWziIwjY9FBnOoL2ofzQOoDG1Gg==
+  dependencies:
+    prop-types "^15.7.2"
+
 "@jsdevtools/rehype-toc@^3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@jsdevtools/rehype-toc/-/rehype-toc-3.0.2.tgz#29c32e6b40cd4b5dafd96cb90d5057ac5dab4a51"
@@ -445,6 +452,11 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
+
+"@primer/octicons-react@^14.2.2":
+  version "14.2.2"
+  resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-14.2.2.tgz#f63f4258261f0f3dcbffd156171988749a29ec92"
+  integrity sha512-CB+D1cgWe1na0VPgt/Mg9Hrk6I3lcrJghz1eKQAiv1OPo19gQxR9GQ69ltMQ71HUKfy3af501hX5cxkVNF1kcQ==
 
 "@rollup/pluginutils@^4.0.0":
   version "4.1.0"

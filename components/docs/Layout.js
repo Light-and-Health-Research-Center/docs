@@ -10,6 +10,8 @@ import { useRouter } from "next/router";
 import { useSearch } from "../global/SearchContext";
 import SearchResultsDialog from "../global/SearchResultsDialog";
 import ProductMenus from "./ProductMenus";
+import ProductLayout from "./productLayouts/ProductLayout";
+import DocFooter from "./footer/DocFooter";
 
 export default function Layout({
   productData,
@@ -32,7 +34,6 @@ export default function Layout({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
-  console.log(productData);
   return (
     <div className="flex">
       <a className="sr-only" href="#main">
@@ -92,14 +93,20 @@ export default function Layout({
                 )}
               </div>
 
-              {frontMatter.pageType === "product" && (
-                <ProductMenus productData={productData} />
-              )}
-
               {frontMatter.pageType === "menu" && (
                 <MenuList list={frontMatter.list} />
               )}
               {children}
+              {frontMatter.pageType === "product" && (
+                <>
+                  <ProductLayout
+                    productData={productData}
+                    frontMatter={frontMatter}
+                  />
+                  <ProductMenus productData={productData} />
+                </>
+              )}
+              <DocFooter data={frontMatter.footer} />
               <Footer />
             </div>
             {!frontMatter.isData && (
