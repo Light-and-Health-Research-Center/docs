@@ -4,7 +4,7 @@ export default function TwoList({ productData, frontMatter }) {
   const layoutData = frontMatter.layoutData;
   return (
     <div className="grid grid-cols-12 gap-0 lg:gap-8">
-      <div className=" col-span-12 lg:col-span-7">
+      <div className="col-span-12 lg:col-span-7 mt-8">
         <h5 className="mb-4">{layoutData.list1.title}</h5>
         <ul>
           {layoutData.list1.children.map((child) => (
@@ -21,7 +21,7 @@ export default function TwoList({ productData, frontMatter }) {
           ))}
         </ul>
       </div>
-      <div className="col-span-12 lg:col-span-5">
+      <div className="col-span-12 lg:col-span-5 mt-8">
         <h5 className="mb-4">{layoutData.list2.title}</h5>
         <ul>
           {layoutData.list2.children.map((child) => (

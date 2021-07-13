@@ -75,7 +75,7 @@ export default function Layout({
               }`}
             >
               <div className="mb-4 border-b">
-                <h1 className={`mb-6 font-bold text-5xl`}>
+                <h1 className="mb-6 font-bold text-4xl lg:text-5xl">
                   {frontMatter.title}
                 </h1>
                 <h6 className="text-black-60 mb-4 text-lg">
