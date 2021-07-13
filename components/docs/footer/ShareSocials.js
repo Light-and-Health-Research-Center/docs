@@ -7,6 +7,7 @@ export default function ShareSocials({ links }) {
       <a
         href={links.facebook}
         target="_blank"
+        rel="noreferrer"
         className="focus:outline-none focus:ring-2 ring-barbiePink-60 ring-offset-2 rounded-sm"
       >
         <Facebook color="#1877F2" size={20} />
@@ -14,6 +15,7 @@ export default function ShareSocials({ links }) {
       <a
         href={links.linkedin}
         target="_blank"
+        rel="noreferrer"
         className="focus:outline-none focus:ring-2 ring-barbiePink-60 ring-offset-2 rounded-sm"
       >
         <Linkedin color="#0A66C2" size={20} />
@@ -21,6 +23,7 @@ export default function ShareSocials({ links }) {
       <a
         href={links.twitter}
         target="_blank"
+        rel="noreferrer"
         className="focus:outline-none focus:ring-2 ring-barbiePink-60 ring-offset-2 rounded-sm"
       >
         <Twitter color="#1DA1F2" size={20} />
