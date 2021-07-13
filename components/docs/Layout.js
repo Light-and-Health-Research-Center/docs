@@ -9,6 +9,7 @@ import { useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useSearch } from "../global/SearchContext";
 import SearchResultsDialog from "../global/SearchResultsDialog";
+import ProductMenus from "./ProductMenus";
 
 export default function Layout({
   productData,
@@ -31,6 +32,7 @@ export default function Layout({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
+  console.log(productData);
   return (
     <div className="flex">
       <a className="sr-only" href="#main">
@@ -61,12 +63,18 @@ export default function Layout({
             title={productData.product_title}
           />
           <div
-            id="#content"
+            id="content"
             className="content pt-4 mt-2 grid xl:gap-12 grid-cols-12"
           >
-            <div className="xl:col-span-8 col-span-12 lg:pt-8">
+            <div
+              className={`col-span-12 ${
+                frontMatter.pageType === "product"
+                  ? ""
+                  : "lg:pt-8 xl:col-span-8"
+              }`}
+            >
               <div className="mb-4 border-b">
-                <h1 className="mb-6">{frontMatter.title}</h1>
+                <h1 className="mb-6 font-bold text-3xl">{frontMatter.title}</h1>
                 <h6 className="text-black-60 mb-4 text-lg">
                   {frontMatter.desc}
                 </h6>
@@ -82,7 +90,11 @@ export default function Layout({
                 )}
               </div>
 
-              {frontMatter.pageType == "menu" && (
+              {frontMatter.pageType === "product" && (
+                <ProductMenus productData={productData} />
+              )}
+
+              {frontMatter.pageType === "menu" && (
                 <MenuList list={frontMatter.list} />
               )}
               {children}
