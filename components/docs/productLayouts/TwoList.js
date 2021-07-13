@@ -1,8 +1,6 @@
 import Link from "next/link";
 
 export default function TwoList({ productData, frontMatter }) {
-  console.log(frontMatter);
-  // console.log(productData.tree);
   const layoutData = frontMatter.layoutData;
   return (
     <div className="grid grid-cols-12 gap-0 lg:gap-8">
