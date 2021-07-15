@@ -5,7 +5,7 @@ export default function MSLogo() {
   return (
     <div className="relative h-full w-auto">
       <Image
-        className="cursor-pointer"
+        className="pointer"
         src={msLogo}
         alt="Mount Sinai Health Logo"
         layout="fill"

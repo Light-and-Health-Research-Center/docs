@@ -1,7 +1,12 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   mode: "jit",
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  purge: {
+    content: [
+      "./pages/**/*.{js,ts,jsx,tsx}",
+      "./components/**/*.{js,ts,jsx,tsx}",
+    ],
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
@@ -57,8 +62,20 @@ module.exports = {
         popFromBL: "-3px 3px 3px rgba(0, 0, 0, 0.20)",
       },
       spacing: {
-        "1/3-4gap": "calc(33.33333% - 1rem)",
+        "1/1-4gap": "calc(100% - 1rem)",
         "1/2-4gap": "calc(50% - 1rem)",
+        "1/3-4gap": "calc(33.33333% - 1rem)",
+        "1/4-4gap": "calc(25% - 1rem)",
+        "1/5-4gap": "calc(20% - 1rem)",
+        "1/6-4gap": "calc(16.66667% - 1rem)",
+        "1/12-4gap": "calc(8.33333% - 1rem)",
+        "1/1-8gap": "calc(100% - 2rem)",
+        "1/2-8gap": "calc(50% - 2rem)",
+        "1/3-8gap": "calc(33.33333% - 2rem)",
+        "1/4-8gap": "calc(25% - 2rem)",
+        "1/5-8gap": "calc(20% - 2rem)",
+        "1/6-8gap": "calc(16.66667% - 2rem)",
+        "1/12-8gap": "calc(8.33333% - 2rem)",
       },
       scale: {
         102: "1.02",

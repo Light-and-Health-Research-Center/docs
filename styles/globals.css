@@ -3,10 +3,18 @@
 @tailwind utilities;
 
 @layer base {
+  ::selection {
+    @apply text-white-100 bg-barbiePink-60;
+  }
+  ::-moz-selection {
+    @apply text-white-100 bg-barbiePink-60;
+  }
   * {
+    scroll-behavior: smooth;
     font-family: 'Inter', 'Open Sans', sans-serif !important;
     -webkit-tap-highlight-color: transparent;
   }
+
   h1, h2, h3, h4, h5, h6 {
     @apply text-cetaceanBlue-100;
   }
@@ -51,7 +59,11 @@
 
 @layer components {
   .mdx a{
-    @apply text-vividCerulean-100 hover:underline focus:outline-none focus-visible:underline active:text-vividCerulean-80;
+    @apply text-vividCerulean-100 cursor-pointer hover:underline focus:outline-none focus-visible:underline active:text-vividCerulean-80;
+  }
+
+  .mdx .anchor {
+  @apply text-cetaceanBlue-100 font-extrabold active:text-vividCerulean-60;
   }
 
   .content li {
@@ -88,7 +100,6 @@
     font-weight: 500; 
   }
 
-
   .mdx h1, .mdx h2, .mdx h3, .mdx h4, .mdx h5, .mdx h6, .mdx p, .mdx ul, .mdx ol {
     @apply mb-4 leading-6;
   }
@@ -98,15 +109,54 @@
   }
 
   .mdx ul, .mdx ol {
-    @apply pl-8;
+    @apply pl-4 md:pl-6;
   }
 
   .mdx ul {
-    @apply list-disc;
+    @apply list-disc list-inside;
   }
 
   .mdx ol {
-    @apply list-decimal;
+    @apply list-none relative;
+    counter-reset: count;
   }
 
+  .mdx ol li {
+    @apply py-2 mb-2 pl-8
+  }
+
+  .mdx ol li::before {
+    @apply text-black-60 pl-4 md:pl-6 absolute left-0 h-full font-bold;
+    content: counter(count);
+    counter-increment: count;
+  }
+
+  @media (min-width: 768px) {
+    .mdx .anchor:before {
+      @apply text-vividCerulean-100 absolute invisible cursor-pointer;
+      margin-left: -1.5rem;
+      max-width: 700px;
+      content: '#';
+    }
+
+    .mdx .anchor:hover {
+      @apply no-underline;
+    }
+
+    .mdx .anchor:hover:before {
+      @apply visible no-underline;
+    }
+
+    .mdx .anchor:focus:before {
+      @apply visible no-underline;
+    }
+
+    .mdx .anchor:focus {
+      @apply no-underline text-cetaceanBlue-100;
+    }
+
+    .mdx .anchor:active:before {
+      @apply text-vividCerulean-60
+    }
+  }
 }

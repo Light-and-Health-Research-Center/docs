@@ -2,3 +2,54 @@
 title: "Advanced usage"
 desc: "Some of the more nuanced, yet powerful features of the CS Calculator 2.0."
 ---
+
+## Add custom source
+
+The CS Calculator 2.0 can perform calculations with it's pre-built sources, as well as with custom user-inputted sources. To add a custom source:
+
+1. Click on the **Add Custom Source** icon in the **Source List** panel.
+
+   <Img
+     src="/img/docs/cscalc/usage/advanced-usage/add-source-icon.png"
+     alt="add source icon"
+     width={859}
+     height={448}
+   />
+
+2. The **Add Custom Source** modal will appear.
+
+   <Img
+     src="/img/docs/cscalc/usage/advanced-usage/add-custom-source-modal.png"
+     alt="add source icon"
+     width={812}
+     height={815}
+   />
+
+3. Fill in the **Source Name**, **Manufacturer**, **CCT/Color**, **Lamp Type**, **Description**, and **SPD** input fields.
+
+<AlertBox color="blue">
+  <b>Tip:</b> only the Source Name and SPD fields are required. The other fields
+  are only used for filtering and organization.
+</AlertBox>
+
+The **Source Name** field:
+
+- Must be unique from any of the other sources.
+
+The **SPD** field:
+
+- Will accept relative or absolute SPD's, and convert them automatically to relative.
+- Will accept any range of wavelengths, but will ultimately cut off anything outside the range 0nm <= wavelength <= 730nm.
+- Will accept any wavelength step size.
+- Must contain at least three data points.
+- Must contain the same number of wavelengths and values.
+
+## Download custom sources as JSON
+
+## Upload custom sources from JSON
+
+## Download metrics as text
+
+## Download combined SPD's as text
+
+## Download all calculations as JSON

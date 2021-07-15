@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://docs.light-health.org
+
+# Sitemaps
+Sitemap: https://docs.light-health.org/sitemap.xml

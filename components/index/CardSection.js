@@ -9,7 +9,7 @@ export default function CardSection({ data }) {
       </div>
       <div className="flex flex-wrap justify-center gap-4">
         {data.map((card) => (
-          <Card key={card.title} card={card} />
+          <Card key={card.product_title} card={card} />
         ))}
       </div>
     </section>

@@ -29,7 +29,10 @@ export default function Card({ card }) {
               <div className="absolute top-0 right-0 bg-gradient-to-l from-white-100 h-full w-5" />
               <div className="w-full flex flex-row gap-2 overflow-x-scroll scrollbar-hide pr-4">
                 {card.programs.sort().map((program) => (
-                  <CardPill key={program} program={program} />
+                  <CardPill
+                    key={`${card.program_title}${program}`}
+                    program={program}
+                  />
                 ))}
               </div>
             </div>

@@ -3,12 +3,10 @@ import SearchBar from "../global/SearchBar";
 import MenuButton from "./MenuButton";
 import MobileNav from "./MobileNav";
 import { Popover } from "@headlessui/react";
-import { useSearch } from "../global/SearchContext";
 
 export default function TopBar({ structure, title, path, slug }) {
-  const searchContext = useSearch();
   return (
-    <Popover>
+    <Popover className="sticky top-0 bg-white-100 z-50 lg:static transition duration-250 ease-in-out">
       {({ open }) => (
         <>
           <div className="flex justify-between h-16 border-b border-black-20 p-2 lg:justify-end">
