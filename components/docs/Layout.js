@@ -45,7 +45,7 @@ export default function Layout({
         path={productData.path}
         slug={pageSlug}
       />
-      <div className="flex-grow">
+      <div className="flex-grow scroll-margin-top">
         <TopBar
           structure={productData.structure}
           title={productData.product_title}

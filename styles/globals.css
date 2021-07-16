@@ -58,12 +58,15 @@
 }
 
 @layer components {
+  * .mdx .katex *{
+    font-family: KaTeX_Main, Times New Roman, serif !important
+  }
   .mdx a{
     @apply text-vividCerulean-100 cursor-pointer hover:underline focus:outline-none focus-visible:underline active:text-vividCerulean-80;
   }
 
   .mdx .anchor {
-  @apply text-cetaceanBlue-100 font-extrabold active:text-vividCerulean-60;
+    @apply text-cetaceanBlue-100 font-extrabold active:text-vividCerulean-60;
   }
 
   .content li {
@@ -75,9 +78,10 @@
   }
 
   .mdx h2 {
+    @apply pt-4 my-4;
+    scroll-margin-top: 4rem;
     font-size: 22px;
     font-weight: 500; /* Semi-bold */
-    @apply pt-4 my-4;
   }
 
   .mdx h3 {
@@ -121,12 +125,12 @@
     counter-reset: count;
   }
 
-  .mdx ol li {
+  .mdx ol > li {
     @apply py-2 mb-2 pl-8
   }
 
-  .mdx ol li::before {
-    @apply text-black-60 pl-4 md:pl-6 absolute left-0 h-full font-bold;
+  .mdx ol > li::before {
+    @apply text-black-60 pl-4 md:pl-6 absolute left-0 font-bold overflow-hidden;
     content: counter(count);
     counter-increment: count;
   }
@@ -156,7 +160,159 @@
     }
 
     .mdx .anchor:active:before {
-      @apply text-vividCerulean-60
+      @apply text-vividCerulean-60;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .mdx h2{
+      scroll-margin-top: 0;
     }
   }
 }
+
+
+/* Prism */
+pre[class*="language-"],
+code[class*="language-"] *{
+  @apply text-gray-800;
+  text-shadow: none;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
+  font-weight: 400;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*="language-"]::selection,
+code[class*="language-"]::selection,
+pre[class*="language-"]::mozselection,
+code[class*="language-"]::mozselection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    text-shadow: none;
+  }
+}
+
+pre[class*="language-"] {
+  @apply border rounded-md text-sm py-2 px-4 m-4;
+  overflow: auto;
+  background: #f9fafb;
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: .1em .3em;
+  border-radius: .3em;
+  color: #dc298d;
+  background: #f9fafb;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  @apply text-gray-700;
+}
+
+.token.punctuation {
+  @apply text-gray-700;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  @apply text-green-500;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  @apply text-purple-500;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  @apply text-yellow-500;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  @apply text-blue-500;
+}
+
+.token.function {
+   @apply text-pink-500;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  @apply text-yellow-500;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+pre[data-line] {
+  position: relative;
+}
+
+pre[class*="language-"] > code[class*="language-"] {
+  position: relative;
+  z-index: 1;
+}
+
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: #fbe3f0;
+  box-shadow: inset 5px 0 0 #e76bac;
+  z-index: 0;
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+/* Prism */

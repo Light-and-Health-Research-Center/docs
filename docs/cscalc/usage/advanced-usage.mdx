@@ -20,36 +20,317 @@ The CS Calculator 2.0 can perform calculations with it's pre-built sources, as w
 
    <Img
      src="/img/docs/cscalc/usage/advanced-usage/add-custom-source-modal.png"
-     alt="add source icon"
+     alt="add custom source modal"
      width={812}
      height={815}
    />
 
 3. Fill in the **Source Name**, **Manufacturer**, **CCT/Color**, **Lamp Type**, **Description**, and **SPD** input fields.
+ 
+  <AlertBox color="blue">
+    <b>Tip:</b> Only the Source Name and SPD fields are required. The other
+    fields are only used for filtering and organization.
+  </AlertBox>
 
-<AlertBox color="blue">
-  <b>Tip:</b> only the Source Name and SPD fields are required. The other fields
-  are only used for filtering and organization.
-</AlertBox>
+  The **Source Name** field:
 
-The **Source Name** field:
+    - Must be unique from any of the other sources.
 
-- Must be unique from any of the other sources.
+  The **SPD** field:
 
-The **SPD** field:
+    - Will accept relative or absolute SPD's, and convert them automatically to relative.
+    - Will accept any range of wavelengths, but will ultimately cut off anything outside the range $0nm \leq wavelength \leq 730nm$.
+    - Will accept any wavelength step size.
+    - Must contain at least three data points.
+    - Must contain the same number of wavelengths and values.
 
-- Will accept relative or absolute SPD's, and convert them automatically to relative.
-- Will accept any range of wavelengths, but will ultimately cut off anything outside the range 0nm <= wavelength <= 730nm.
-- Will accept any wavelength step size.
-- Must contain at least three data points.
-- Must contain the same number of wavelengths and values.
+  If any of these criteria are not met, the **Add Source** button will be disabled.
+
+  <AlertBox><b>Tip:</b> Use the <b>Toggle SPD Input Type</b> button to be able to enter in wavelengths and values in seperate text boxes. 
+    <Img
+      src="/img/docs/cscalc/usage/advanced-usage/toggle-spd-input-type.png"
+      alt="toggle spd input type button"
+      width={783}
+      height={270}
+    />
+  </AlertBox>
 
 ## Download custom sources as JSON
 
+For the times when you want to save your custom sources from the CS Calculator 2.0, and not have to manually input them each time you revisit the site, you can download your sources.
+
+1. Click the **Download Custom Sources as JSON** icon in the **Source List** panel.
+  <Img
+    src="/img/docs/cscalc/usage/advanced-usage/download-sources-as-json.png"
+    alt="download custom sources as JSON"
+    width={707}
+    height={448}
+  />
+
+2. Save the file from the download window that pops up.
+    <AlertBox><b>Tip:</b> This wpopup window might look slightly different depending on the browser you are using.</AlertBox>
+      <Img
+        src="/img/docs/cscalc/usage/advanced-usage/download-sources-popup.png"
+        alt="download custom sources as JSON download popup window"
+        width={451}
+        height={339}
+      />
+
+      Here is an example of the structure of the resulting file. This is an example of a JSON file containg **two** sources: a warm source, and a cool source.
+
+      ```json
+      {
+        "sources": [
+          {
+            "id": "Warm Source",
+            "manufacturer": "N/A",
+            "cct": "4000 K",
+            "lamp": "N/A",
+            "info": "4000 K CCT, Warm circadian response source.",
+            "spd": {
+              "wavelength": [...],
+              "value": [...]
+            },
+            "custom": "true"
+          },
+          {
+            "id": "Cool Source",
+            "manufacturer": "N/A",
+            "cct": "6500 K",
+            "lamp": "N/A",
+            "info": "6500 K, cool response source.",
+            "spd": {
+              "wavelength": [...],
+              "value": [...] 
+            },
+            "custom": "true"
+          }
+        ]
+      }
+      ```
+
+      <AlertBox><b>Tip:</b> If the resulting <b>Source</b> object in the downloaded JSON file is empty, check to make sure you've added 1 or more custom sources.</AlertBox>
+
+      To learn more about JSON, visit the [JSON site](https://www.json.org/json-en.html), or [W3Schools](https://www.w3schools.com/js/js_json_intro.asp)
+
 ## Upload custom sources from JSON
+
+Once you've downloaded your custom sources as JSON, you are able to upload those sources back into the calculator, without the hassle of manual input.
+
+1. Click the **Upload Custom Sources from JSON** icon in the **Source List** panel.
+  <Img
+    src="/img/docs/cscalc/usage/advanced-usage/upload-sources-as-json.png"
+    alt="upload custom sources as JSON icon"
+    width={853}
+    height={450}
+  />
+
+2. An **Upload Custom Sources from JSON** modal will appear, click **Browse...** and select the JSON sources you wish to upload.
+  <AlertBox><b>Tip:</b> You can select and upload any number of JSON files at one time.</AlertBox>
+  <AlertBox color="yellow"><b>Warning:</b> Sources must have a unique id. If two or more of the sources you wish to upload share the same id, they will be ignored.</AlertBox>
+  <Img
+    src="/img/docs/cscalc/usage/advanced-usage/upload-custom-sources-as-json-modal.png"
+    alt="upload custom sources as JSON modal"
+    width={517}
+    height={252}
+  />
+
+3. Once you've selected the JSON files you wish to upload, click the **Upload Sources** button.
+  <Img
+    src="/img/docs/cscalc/usage/advanced-usage/upload-sources-button.png"
+    alt="upload sources button"
+    width={513}
+    height={252}
+  />
+
+4. If the files you uploaded were valid, you will see your custom sources appear in the **Source List** panel, and automically be added to the **Selected Sources** panel.
+  <Img
+    src="/img/docs/cscalc/usage/advanced-usage/uploaded-sources-added-to-selected-sources.png"
+    alt="uploaded sources added to selected sources panel"
+    width={856}
+    height={194}
+  />
+
+## Edit a Custom Source
+
+Editing a custom source from within the CS Calculator 2.0 can be helpful so that you don't have to upload an entirely new source everytime you want to make a change.
+
+1. Click the **Edit Source** icon that appears in the **Source List** panel next to all custom sources.
+  <Img
+    src="/img/docs/cscalc/usage/advanced-usage/edit-source-icon.png"
+    alt="edit source icon"
+    width={855}
+    height={449}
+  />
+
+2. Adjust any input fields in the **Edit Custom Source** modal that appears and click **Edit Source**. This input fields are the same as when <DocLink href="#add-custom-source">adding a custom source</DocLink>.
+  <Img
+    src="/img/docs/cscalc/usage/advanced-usage/edit-source-modal.png"
+    alt="edit source modal"
+    width={816}
+    height={815}
+  />
 
 ## Download metrics as text
 
-## Download combined SPD's as text
+Downloading the combined output metrics as text can be helpful in translating them into your own work, such as copy and pasting them into a Microsoft Excel spreadsheet.
+
+1. Click the **Download Metrics as Text** icon in the **Metrics** panel.
+  <Img
+    src="/img/docs/cscalc/usage/advanced-usage/download-metrics-as-text-icon.png"
+    alt="download metrics as text icon"
+    width={851}
+    height={640}
+  />
+
+2. Save the file from the download window that pops up.
+  <AlertBox><b>Tip:</b> This wpopup window might look slightly different depending on the browser you are using.</AlertBox>
+  <Img
+    src="/img/docs/cscalc/usage/advanced-usage/download-metrics-popup.png"
+    alt="download metrics popup"
+    width={447}
+    height={333}
+  />
+
+  Here is an example of the structure of the resulting file.
+
+  ```textile
+  CS	0.206
+  CLA 2.0	161
+  Illuminance	200
+  Irradiance	9.7548e-1
+  Photon Flux	3.0397e+18
+  EML	110
+  CCT	2857
+  Duv	0.000
+  CRI	100.0
+  GAI	53.3
+  Chromaticity Coordinates	(0.4475, 0.4075)
+  CIE S-cone Irradiance	5.0839e-2
+  CIE M-cone Irradiance	2.3494e-1
+  CIE L-cone Irradiance	3.3137e-1
+  CIE Rhodopic Irradiance	1.6617e-1
+  CIE Melanopic Irradiance	1.3151e-1
+  ```
+
+  <AlertBox color="yellow"><b>Warning:</b> Because of the way the web outputs this text content, it will not copy/paste nicely into Microsoft Excel, the resulting file from the download will, however.</AlertBox>
+
+
+## Download combined SPDs as text
+
+Downloading the combined SPD's as text can be helpful in translating them into your own work, such as copy and pasting them into a Microsoft Excel spreadsheet.
+
+1. Click the **Download Combined SPD's as Text** icon in the **Combined Source SPD's** panel.
+  <Img
+    src="/img/docs/cscalc/usage/advanced-usage/download-combined-spds-as-text-icon.png"
+    alt="download combined spds as text icon"
+    width={858}
+    height={760}
+  />
+
+2. Choose whether to **Download Relative SPD** or **Download Absolute SPD** from the dropdown.
+  <Img
+    src="/img/docs/cscalc/usage/advanced-usage/download-relative-vs-absolute-spd.png"
+    alt="download relative vs absolute spd dropdown"
+    width={352}
+    height={132}
+  />
+
+3. Save the file from the download window that pops up.
+  <AlertBox><b>Tip:</b> This wpopup window might look slightly different depending on the browser you are using.</AlertBox>
+  <Img
+    src="/img/docs/cscalc/usage/advanced-usage/download-combined-spd-popup.png"
+    alt="download combined spd popup"
+    width={455}
+    height={339}
+  />
+
+  Here is an example of the structure of the resulting file.
+
+  ```textile
+  380	0.0000013293803216772215
+  382	0.000001388033376605896
+  384	0.0000014484251156793788
+  386	0.000001510573695104725
+  388	0.0000015744964791381182
+  ...
+  ```
+
+  <AlertBox color="yellow"><b>Warning:</b> Because of the way the web outputs this text content, it will not copy/paste nicely into Microsoft Excel, the resulting file from the download will, however.</AlertBox>
 
 ## Download all calculations as JSON
+
+In the case that you want to experiment with the CS Calculator 2.0 data in your own programmatic work, we allow you to download all the calculation data into a single JSON file.
+
+1. Click the **Download All Calculations as JSON** icon in the **Calculations** tab.
+  <Img
+    src="/img/docs/cscalc/usage/advanced-usage/download-all-calculations-as-json-icon.png"
+    alt="download all calculations as json icon"
+    width={918}
+    height={270}
+  />
+
+2. Save the file from the download window that pops up.
+   <Img
+    src="/img/docs/cscalc/usage/advanced-usage/download-all-calculations-popup.png"
+    alt="download all calculations popup"
+    width={451}
+    height={335}
+  />
+
+  Here is an example of the structure of the resulting file.
+
+  ```json
+  {
+    "version": "2.0.0",
+    "date": "Fri Jul 16 2021 02:04:18 GMT-0400 (Eastern Daylight Time)",
+    "sources": {
+      "CIE A: Standard Incandescent": {
+        "info": {
+          "id": "CIE A: Standard Incandescent",
+          "manufacturer": "Other",
+          "cct": "2700 K",
+          "lamp": "Incandescent",
+          "desc": "CIE standard illuminant A ...",
+          "spd": {
+            "wavelengths": [...],
+            "values": [...]
+          }
+        },
+        "lux": "200"
+      }
+    },
+    "input_variables": {
+      "exposure_duration": "1",
+      "distribution_scaler": "1"
+    },
+    "combined_metrics": {
+      "cs_2.0": "0.206",
+      "cla_2.0": "161",
+      "illuminance": "200",
+      "irradiance": "9.7548e-1",
+      "flux": "3.0397e+18",
+      "eml": "110",
+      "cct": "2857",
+      "duv": "0.000",
+      "cri": "100.0",
+      "gai": "53.3",
+      "chromaticity_coordinates": "(0.4475, 0.4075)",
+      "cie_s-cone-irradiance": "5.0839e-2",
+      "cie_m-cone_irradiance": "2.3494e-1",
+      "cie_l-cone_irradiance": "3.3137e-1",
+      "cie_rhodopic_irradiance": "1.6617e-1",
+      "cie_melanopic_irradiance": "1.3151e-1"
+    },
+    "combined_spd": {
+      "relative": {
+        "wavelengths": [...],
+        "values": [...]
+      },
+      "absolute": {
+        "wavelengths": [...],
+        "values": [...]
+      }
+    }
+  }
+  ```
