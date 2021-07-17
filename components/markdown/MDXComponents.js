@@ -9,6 +9,7 @@ import {
 import Img from "./Img";
 import DocLink from "./DocLink";
 import AlertBox from "./AlertBox";
+import Icon from "./Icon";
 
 const MDXComponents = {
   Image,
@@ -21,6 +22,7 @@ const MDXComponents = {
   Img,
   DocLink,
   AlertBox,
+  Icon,
 };
 
 export default MDXComponents;
