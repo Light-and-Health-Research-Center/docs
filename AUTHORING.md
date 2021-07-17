@@ -1,5 +1,31 @@
 # Authoring
 
+## Table of contents
+
+- [MDX](#mdx)
+  - [Markdown](#markdown)
+  - [Markdown extensions](#markdown-extensions)
+    - [KaTeX](#katex)
+    - [Prism](#prism)
+  - [Custom components](#custom-components)
+  - [Frontmatter](#frontmatter)
+- [Documentation structure](#documentation-structure)
+  - [Directory structure](#directory-structure)
+  - [Naming files and directories](#naming-files-and-directories)
+  - [\_data.mdx](#--datamdx)
+    - [Module level](#module-level)
+    - [attributes](#attributes)
+    - [Heading level](#heading-level)
+    - [attributes](#attributes-1)
+  - [index.mdx](#indexmdx)
+    - [layouts](#layouts)
+      - [attributes](#attributes-2)
+  - [documentation .mdx files](#documentation-mdx-files)
+- [Static files](#static-files)
+- [Misc notes](#misc-notes)
+  - [Markdown headings](#markdown-headings)
+  - [Markdown inside components](#markdown-inside-components)
+
 ## MDX
 
 These docs are written in [markdown](https://www.markdownguide.org/), or more specifically [MDX](https://mdxjs.com/). More on MDX later.
@@ -260,7 +286,7 @@ Any static files such as images, videos, pdf's, and other documents that you wan
 
 I recommend matching the [docs](./docs) directory structure in the [public](./public) directory, i.e. if I was serving an image to be used on the docs/cscalc/about/background page, I would store the image in /public/img/cscalc/about/background directory.
 
-## Misc Notes
+## Misc notes
 
 ### Markdown headings
 
