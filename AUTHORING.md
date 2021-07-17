@@ -10,9 +10,25 @@ These docs are written in [markdown](https://www.markdownguide.org/), or more sp
 
 Each of the individual pages in this website is written in markdown. Markdown provides a very simple authoring experience, allowing us to write documentation pages fast, without the need to program any html/css/js.
 
+```md
+## This is a heading
+
+This is a paragraph with a [link](https://www.google.com). This paragraph also contains lists:
+
+1. Item 1
+2. Item 2
+3. Item 3
+
+- Item
+- Item
+- Item
+```
+
+<img src="./assets/img/md/authoring/Markdown.png" />
+
 Markdown supports headings, paragraphs, lists, tables, links, and more.
 
-To learn how to write markdown, visit [markdownguide.org](https://www.markdownguide.org/) or Adam Pritchard's [Markdown Cheatseat](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis).
+To learn how to write markdown, visit [markdownguide.org](https://www.markdownguide.org/) or see Adam Pritchard's [Markdown Cheatseat](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis).
 
 ### Markdown extensions
 
@@ -46,9 +62,9 @@ export default function Books() {
 ```
 ````
 
-<img src="./assets/img/md/authoring/KaTeX.png" />
+<img src="./assets/img/md/authoring/Prism.png" />
 
-View Prism support languages [here](https://prismjs.com/#supported-languages).
+View Prism supported languages [here](https://prismjs.com/#supported-languages).
 
 ### Custom components
 
