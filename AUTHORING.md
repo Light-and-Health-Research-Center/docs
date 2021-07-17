@@ -62,7 +62,7 @@ To learn how to write markdown, visit [markdownguide.org](https://www.markdowngu
 
 ### Markdown extensions
 
-[docs.light-health.org](https://docs.light-health.org) also supports a few markdown extensions empowered via [rehype](https://github.com/rehypejs/rehype) and [remark](https://github.com/gnab/remark).
+[Light and Health Docs](https://docs.light-health.org) also supports a few markdown extensions empowered via [rehype](https://github.com/rehypejs/rehype) and [remark](https://github.com/gnab/remark).
 
 #### KaTeX
 
