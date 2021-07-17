@@ -6,7 +6,7 @@
 
 A place to author, store, and present light and health documentation.
 
-This open-source repository contains the documentation website code and Markdown source files for docs.light-health.org.
+This open-source repository contains the source code and documentation Markdown files for [docs.light-health.org](https://docs.light-health.org).
 
 ## Getting started
 
