@@ -24,7 +24,7 @@ This is a paragraph with a [link](https://www.google.com). This paragraph also c
 - Item
 ```
 
-<img src="./assets/img/md/authoring/Markdown.png" />
+<img src="./assets/img/md/authoring/markdown.png" />
 
 Markdown supports headings, paragraphs, lists, tables, links, and more.
 
