@@ -1,5 +1,9 @@
 # Light and Health Docs
 
+<p align="center">
+<img src="./assets/img/md/readme/books.jpg" width="400px">
+</p>
+
 A place to author, store, and present light and health documentation.
 
 This open-source repository contains the documentation website code and Markdown source files for docs.light-health.org.
