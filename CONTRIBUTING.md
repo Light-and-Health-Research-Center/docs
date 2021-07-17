@@ -6,6 +6,14 @@ If you'd like to edit content on any of the documentation pages, click the **Edi
 
 <img src="./assets/img/md/contributing/edit.png" width="400px" />
 
+## Report a bug
+
+If you'd like to report a bug, please [create an issue](https://github.com/Light-and-Health-Research-Center/docs/issues/new?assignees=&labels=&template=bug_report.md&title=%5BBUG%5D)
+
+## Feature request
+
+If you'd like to request a feature, please [create an issue](https://github.com/Light-and-Health-Research-Center/docs/issues/new?assignees=&labels=&template=feature_request.md&title=)
+
 
 ## Custom markdown components for .mdx
 
