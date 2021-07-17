@@ -14,9 +14,7 @@ export default function Hero() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
             Light and Health Docs
           </h1>
-          <p>
-            Choose a product below to get started reading its documentation.
-          </p>
+          <p>Choose a module below to get started reading its documentation.</p>
         </div>
       </div>
     </section>

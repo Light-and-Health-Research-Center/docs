@@ -41,14 +41,14 @@ export default function Layout({
       </a>
       <SideBar
         structure={productData.structure}
-        title={productData.product_title}
+        title={productData.module_title}
         path={productData.path}
         slug={pageSlug}
       />
       <div className="flex-grow scroll-margin-top">
         <TopBar
           structure={productData.structure}
-          title={productData.product_title}
+          title={productData.module_title}
           path={productData.path}
           slug={pageSlug}
         />
@@ -61,7 +61,7 @@ export default function Layout({
             toFocus={toFocus}
             structure={productData.structure}
             slug={pageSlug}
-            title={productData.product_title}
+            title={productData.module_title}
           />
           <div
             id="content"

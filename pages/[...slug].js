@@ -31,7 +31,7 @@ export default function slug({
           crossOrigin="anonymous"
         />
         <title key="head-title">
-          {frontMatter.title} - {productData.product_title} | Light and Health
+          {frontMatter.title} - {productData.module_title} | Light and Health
           Docs
         </title>
         <meta
@@ -41,7 +41,7 @@ export default function slug({
         />
         <meta
           property="og:title"
-          content={`${frontMatter.title} - ${productData.product_title} | Light and Health Docs`}
+          content={`${frontMatter.title} - ${productData.module_title} | Light and Health Docs`}
           key="head-ogtitle"
         />
         <meta

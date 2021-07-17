@@ -11,8 +11,8 @@ export default function Card({ card }) {
             <div className="relative h-40 w-28 xs:h-44 xs:w-36">
               <Image
                 className="rounded-l-xl"
-                src={`${card.product_img}`}
-                alt={`${card.product_title} Card Image`}
+                src={`${card.module_img}`}
+                alt={`${card.module_title} Card Image`}
                 layout="fill"
                 objectFit="cover"
               />
@@ -20,10 +20,10 @@ export default function Card({ card }) {
           </div>
           <div className="w-full flex flex-col p-2 px-4 overflow-hidden">
             <h4 className="w-min truncate transition duration-500 ease-in-out">
-              {card.product_title}
+              {card.module_title}
             </h4>
             <p className="line-clamp-3 transition duration-500 ease-in-out">
-              {card.product_desc}
+              {card.module_desc}
             </p>
             <div className="relative mt-auto w-full">
               <div className="absolute top-0 right-0 bg-gradient-to-l from-white-100 h-full w-5" />
