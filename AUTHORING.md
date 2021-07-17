@@ -38,6 +38,8 @@ The [Light and Health Docs](https://docs.light-health.org) are written in [markd
 
 Each of the individual pages in this website is written in markdown. Markdown provides a very simple authoring experience, allowing us to write documentation pages fast, without the need to program any html/css/js.
 
+Here is an example:
+
 ```md
 ## This is a heading
 
