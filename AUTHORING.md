@@ -30,7 +30,7 @@ How to create documentation modules for [Light and Health Docs](https://docs.lig
 
 ## MDX
 
-These docs are written in [markdown](https://www.markdownguide.org/), or more specifically [MDX](https://mdxjs.com/). More on MDX later.
+The [Light and Health Docs](https://docs.light-health.org) are written in [markdown](https://www.markdownguide.org/), or more specifically [MDX](https://mdxjs.com/). More on MDX later.
 
 ### Markdown
 
