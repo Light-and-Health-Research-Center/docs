@@ -27,7 +27,6 @@ export function ImageGalleryImage({
   linkInternal = false,
 }) {
   const TWHeights = {
-    default: "h-32",
     xxs: "h-6",
     xs: "h-12",
     sm: "h-20",
@@ -38,7 +37,6 @@ export function ImageGalleryImage({
   };
 
   const TWCols = {
-    default: "md:w-1/2-8gap",
     2: "md:w-1/2-8gap",
     3: "md:w-1/3-8gap",
     4: "md:w-1/4-8gap",
