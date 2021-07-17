@@ -7,21 +7,13 @@ How to create documentation modules for [Light and Health Docs](https://docs.lig
 - [MDX](#mdx)
   - [Markdown](#markdown)
   - [Markdown extensions](#markdown-extensions)
-    - [KaTeX](#katex)
-    - [Prism](#prism)
   - [Custom components](#custom-components)
   - [Frontmatter](#frontmatter)
 - [Documentation structure](#documentation-structure)
   - [Directory structure](#directory-structure)
   - [Naming files and directories](#naming-files-and-directories)
   - [\_data.mdx](#--datamdx)
-    - [Module level](#module-level)
-    - [attributes](#attributes)
-    - [Heading level](#heading-level)
-    - [attributes](#attributes-1)
   - [index.mdx](#indexmdx)
-    - [layouts](#layouts)
-      - [attributes](#attributes-2)
   - [documentation .mdx files](#documentation-mdx-files)
 - [Static files](#static-files)
 - [Misc notes](#misc-notes)
@@ -192,7 +184,7 @@ structure:
 ---
 ```
 
-#### attributes
+#### Attributes
 
 - module_title
 - module_img - relative to the /public directory
@@ -217,7 +209,7 @@ desc: "Technical resources and support for the CS Calculator 2.0"
 ---
 ```
 
-#### attributes
+#### Attributes
 
 - title
 - desc
@@ -260,7 +252,7 @@ This file corresponds to this page:
 
 Currently there is only one layout option available `"twolist"` which requires you to specify the names and children (in the form of relative URL's) of two lists, the first one includes desc information and the second doesn't.
 
-##### attributes
+##### Attributes
 
 - title
 - desc
