@@ -62,7 +62,7 @@ Follow these steps to get a development environment up and running on your machi
   yarn dev
   ```
 
-9. Open app
+## Open app
 
   Open a browser and navigate to the URL `localhost:3000`, where the application should be running.
 
