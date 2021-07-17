@@ -46,7 +46,7 @@ Follow these steps to get a development environment up and running on your machi
 
 ## [Create Github personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
-  Remember you access token for the next step.
+  Remember your access token for the next step.
 
 ## Add .env variables
 
