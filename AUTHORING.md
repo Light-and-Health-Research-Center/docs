@@ -1,5 +1,7 @@
 # Authoring
 
+How to create documentation modules for [Light and Health Docs](https://docs.light-health.org)
+
 ## Table of contents
 
 - [MDX](#mdx)
