@@ -23,7 +23,7 @@ function getLink(product, menu, docFile) {
 
 function getSlug(productData, menu, docFile) {
   let slug = ["", "", ""];
-  slug[0] = productData.product_title;
+  slug[0] = productData.module_title;
 
   for (const obj of productData.structure) {
     if (menu === cleanPath(Object.keys(obj)[0])) {
