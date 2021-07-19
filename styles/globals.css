@@ -69,6 +69,10 @@
   .ms-focus-vividCerulean {
     @apply focus:outline-none focus-within:ring-2 ring-vividCerulean-60 ring-opacity-70 active:ring-opacity-100 focus-within:border-vividCerulean-100;
   }
+
+  .normal-scroll {
+    scroll-behavior: auto;
+  }
 }
 
 @layer components {
