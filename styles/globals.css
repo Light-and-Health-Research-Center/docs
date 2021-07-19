@@ -10,39 +10,53 @@
     @apply text-white-100 bg-barbiePink-60;
   }
   * {
-    scroll-behavior: smooth;
     font-family: 'Inter', 'Open Sans', sans-serif !important;
     -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html.normal-scroll {
+    scroll-behavior: auto;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply text-cetaceanBlue-100;
   }
+
   h1 {
     font-size: 32px;
     line-height: 1.25;
     font-weight: 600; /* Semi-Bold */
   }
+
   h2 {
     font-size: 28px;
     font-weight: 600; /* Semi-bold */
   }
+
   h3 {
     font-size: 24px;
     font-weight: 600; /* Semi-Bold */
   }
+
   h4 {
     font-size: 20px;
     font-weight: 600; /* Semi-Bold */
   }
+
   h5 {
     font-size: 16px;
     font-weight: 600; /* Semi-bold */
   }
+
   h6 {
     font-size: 1rem;
     font-weight: 500; 
   }
+
   p {
     font-size: 1rem;
     @apply text-black-60;
