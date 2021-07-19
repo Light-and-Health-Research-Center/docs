@@ -14,14 +14,6 @@
     -webkit-tap-highlight-color: transparent;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
-
-  html.normal-scroll {
-    scroll-behavior: auto;
-  }
-
   h1, h2, h3, h4, h5, h6 {
     @apply text-cetaceanBlue-100;
   }
