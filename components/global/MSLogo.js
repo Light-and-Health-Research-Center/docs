@@ -1,4 +1,4 @@
-import msLogo from "../../public/img/ms_logo.png";
+import logo from "../../public/img/lhrc_logo.png";
 import Image from "next/image";
 
 export default function MSLogo() {
@@ -6,7 +6,7 @@ export default function MSLogo() {
     <div className="relative h-full w-auto">
       <Image
         className="pointer"
-        src={msLogo}
+        src={logo}
         alt="Mount Sinai Health Logo"
         layout="fill"
         objectFit="contain"

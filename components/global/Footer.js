@@ -9,7 +9,7 @@ export default function Footer({ offwhite }) {
       } flex h-12 p-4 justify-center`}
     >
       <Link href="/">
-        <a className="h-auto w-7 rounded-sm ms-focus-barbiePink focus:ring-offset-4">
+        <a className="h-auto w-20 rounded-sm ms-focus-barbiePink focus:ring-offset-4">
           <MSLogo />
         </a>
       </Link>

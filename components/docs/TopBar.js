@@ -11,7 +11,7 @@ export default function TopBar({ structure, title, path, slug }) {
         <>
           <div className="flex justify-between h-16 border-b border-black-20 p-2 lg:justify-end">
             <div className="flex lg:hidden">
-              <DocsLogo img_width="w-20" />
+              <DocsLogo img_width="w-56" img_height="h-12" />
             </div>
             <Popover.Button className="appearance-none h-full lg:hidden bg-white-off rounded-md border border-black-20 ms-focus-barbiePink">
               <MenuButton open={open} />
