@@ -2,3 +2,57 @@
 title: "CS model"
 desc: "The CS model at work behind the CS Calculator 2.0"
 ---
+
+## Overview
+
+<BlockQuote by="Daan and Beersma" ref_num={1}>A useful model should be minimally complex to account for an existing set of data and maximally specific about what its parameters mean in physiological terms. It should not aim at completeness. The essence of a model's usefulness is in being a simplification of nature, rather than in approaching the complexity of nature itself.</BlockQuote>
+
+<BlockQuote by="Attributed to Albert Einstein, perhaps equivocally" ref_num={2}>Everything should be made as simple as possible, but not simpler.</BlockQuote>
+
+These two epigraphs provide insight into the way we have approached the CS model. Any model is, by definition, a simplification of nature. The art of modeling is knowing how to begin and, perhaps more importantly, knowing when to stop. We began with the neurophysiology of the retina and ended with a model predictive of the available data. Thus, the terms in the CS model and the functional relationships among those terms correspond to our collective understanding of retinal neuroanatomy and neurophysiology.
+
+<References>
+  <Reference num={1}>Daan S, Beersma DG. Circadian gating of human sleep-wake cycles. In: Moore-Ede MC, Czeisler CA, editors. Mathematical Models of the Circadian Sleep-Wake Cycle. New York: Raven Press; 1984. p. 129-58.</Reference>
+  <Reference num={2}>Quote Investigator. Everything should be made as simple as possible, but not simpler: Gregory F. Sullivan; 2011 [Available from: <a target="_blank" rel="noreferrer" href="https://quoteinvestigator.com/2011/05/13/einstein-simple/">https://quoteinvestigator.com/2011/05/13/einstein-simple/</a>].</Reference>
+</References>
+
+## ipRGCs
+
+The intrinsically photosensitive retinal ganglion cells (ipRGCs), **(3, 4)** which contain the photopigment melanopsin, **(5)**, are the linchpin of circadian phototransduction. In humans these photosensitive neurons connect the retina to the biological clock. Without these neurons, there is no way for the endogenous biological clock in the SCN to synchronize with the exogenous 24-hour light-dark cycle. Some models of circadian phototransduction stop at this point, but this is an oversimplification. In fact, ipRGCs are the last step in circadian phototransduction, not the first nor the only step.
+
+<References>
+  <Reference num={3}>Berson DM, Dunn FA, Takao M. Phototransduction by retinal ganglion cells that set the circadian clock. Science. 2002;295(5557):1070-3.</Reference>
+  <Reference num={4}>Hattar S, Liao HW, Takao M, Berson DM, Yau KW. Melanopsin-containing retinal ganglion cells: Architecture, projections, and intrinsic photosensitivity. Science. 2002;295(5557):1065-70.</Reference>
+  <Reference num={5}>Provencio I, Jiang G, De Grip WJ, Hayes WP, Rollag MD. Melanopsin: An opsin in melanophores, brain, and eye. Proc Natl Acad Sci U S A. 1998;95(1):340-5.</Reference>
+</References>
+
+## S-cones
+
+The spectral sensitivity of circadian phototransduction does not correspond to the spectral sensitivity of the ipRGCs, so other photoreceptors must be involved. Specifically, short (S) wavelength cones must be involved to account for the heightened sensitivity of circadian phototransduction to very short wavelengths (circa 460 nm). However, S-cones cannot communicate directly with ipRGCs. Rather, their responses to light *must* be processed by a network of neurons that, in turn, reach the ipRGCs. Bipolar cells are one of these neuron types. 
+
+## Bipolar neurons
+
+As the name implies, bipolar neurons can signal different polarities, with one type of bipolar neuron generating spectrally opponent signals from S-cones (depolarizing) or the combined response from long (L)- and middle (M)- wavelength cones (hyperpolarizing). This type of bipolar neuron is responsible for the initiation of spectrally opponent, blue versus yellow, color vision. As such, it must not only be responsible for signaling the heightened sensitivities of the visual and the circadian systems to short wavelengths, but it must also be responsible for the well-known phenomenon of *subadditivity* for both the visual and the circadian systems. Indeed, with a background in neurophysiology, subadditivity is an expected feature of circadian phototransduction where S-cones are involved. Because S-cone signals *must* be processed by spectrally opponent bipolar neurons before reaching the ipRGCs, it *must* also be true that for some conditions adding *more light* to the retina will *decrease* the signal strength reaching the ipRGCs. Specifically, the signal strength of the spectrally opponent bipolar in response to a spectrum dominated by short wavelengths (e.g., one that appears blue) can be reduced by adding a spectrum dominated by long wavelengths (e.g., one that appears yellow). Any model of circadian phototransduction *must* account for both heighted sensitivity to short wavelengths and subadditivity, both of which are expected from the neurophysiology.
+
+## Human circadian phototransduction threshold
+
+Another important characteristic of human circadian phototransduction is its high threshold for activation relative to visual phototransduction. Much more light is needed to entrain or disrupt the cycling of the biological clock than is needed for vision. In contrast, mice are some 3000 times more sensitive to circadian-effective light than humans. **(6)** This species difference cannot be explained without an understanding of the neurophysiology. In mice, there is a direct connection between rod bipolar neurons (which are not spectrally opponent) and ipRGCs, making this species very sensitive to light for both the visual and the circadian systems. **(7)** Like mice, rods in humans provide the visual system’s high sensitivity to light, but in contrast to mice, the rods’ signals do not reach the ipRGCs directly. Rather, in humans, rods stimulate inhibitory amacrine cells, another type of retinal neuron, that functionally hold the ipRGC response to light in check, thereby elevating threshold until the relatively low-sensitive cones come into play, themselves inhibiting rod signals. 
+
+<References>
+  <Reference num={6}>Bullough JD, Rea MS, Figueiro MG. Of mice and women: Light as a circadian stimulus in breast cancer research. Cancer Causes Control. 2006;17(4):375-83.</Reference>
+  <Reference num={7}>Rea MS, Nagare R, Figueiro MG. Modeling circadian phototransduction: Retinal neurophysiology and neuroanatomy. Front Neurosci. 2021;14:1467.</Reference>
+</References>
+
+## CS model of today and tomorrow
+
+By taking these basic neurophysiological insights into account, it was possible to construct a quantitative framework, or model, to characterize light as a stimulus for the circadian system. **(7)** We were able to use this model to predict a wide variety of data without post-hoc and unconstrained adjustments to the model terms or coefficients. **(8)**
+
+And it was there we decided to stop.
+
+This does not mean that the model of circadian phototransduction is forever complete or unchanging. Quite the contrary, models are particularly useful for generating new, testable hypotheses, the results of which can and should inform revisions to a model. The **CS model** is no different in this regard.
+
+<References>
+  <Reference num={7}>Rea MS, Nagare R, Figueiro MG. Modeling circadian phototransduction: Retinal neurophysiology and neuroanatomy. Front Neurosci. 2021;14:1467.</Reference>
+  <Reference num={8}>Rea MS, Nagare R, Figueiro MG. Modeling circadian phototransduction: Quantitative predictions of psychophysical data. Front Neurosci. 2021;15:44.</Reference>
+</References>
+

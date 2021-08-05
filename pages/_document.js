@@ -17,6 +17,12 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           ></link>
 
+          {/* IM Fell French Canon SC */}
+          <link
+            href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&display=swap"
+            rel="stylesheet"
+          ></link>
+
           {/* Favicon */}
           <link
             rel="apple-touch-icon"

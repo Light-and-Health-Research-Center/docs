@@ -11,6 +11,7 @@ import DocLink from "./DocLink";
 import AlertBox from "./AlertBox";
 import Icon from "./Icon";
 import CSCalcCitationGenerator from "./CSCalcCitationGenerator";
+import BlockQuote from "./BlockQuote";
 
 const MDXComponents = {
   Image,
@@ -25,6 +26,7 @@ const MDXComponents = {
   AlertBox,
   Icon,
   CSCalcCitationGenerator,
+  BlockQuote,
 };
 
 export default MDXComponents;
