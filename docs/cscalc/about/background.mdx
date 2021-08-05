@@ -1,4 +1,32 @@
 ---
 title: "Background"
-desc: "The history of the CS Calculator 2.0, why it was built, and the problems it looks to solve."
+desc: "What is light, and how can the CS Caclualtor help us to quantify its effects on our world."
 ---
+
+## Light
+
+Light is a biophysical construct, meaning that the physical world and the biological world *both* determine the definition of light. The first definition of light was developed in 1924 based upon experiments measuring the radiant watts needed at different wavelengths to be seen by humans as equally bright. **(1)** This research led to the adoption of the photopic luminous efficiency function, $V(\lambda)$, which was intended to represent the spectral sensitivity of the human retina at optical radiation levels where only the foveal cones provided neural signals to the brain. Subsequently this biophysical construct of light based upon $V(\lambda)$ was “promoted” to the physical world through the SI system. Today we routinely make physical measurements and prescribe light levels in terms of illuminance, luminance, candelas, and lumens. But these physical quantities are not related to the biology of plants or other animals, nor are these measurements related to the variety of ways that humans sense optical radiation via the retina. Recognizing this limitation, the scotopic luminous efficiency function $V^{\prime}(\lambda)$ was advanced in 1951 to represent the spectral sensitivity of the human retina when only rods were active. **(2)** Even with the biophysical constructs of $V(\lambda)$ and $V^{\prime}(\lambda)$, many more definitions of light need to be considered to accurately relate the biology of the human retina to the physical world of optical radiation.
+
+<References>
+  <Reference num={1}>National Physical Laboratory (Great Britain). [International Commission on Illumination, sixth session, Geneva, July, 1924: Compendium of proceedings and report of meetings]. Cambridge, UK: Cambridge University Press; 1926.</Reference>
+  <Reference num={2}>Jansen J, Halbertsma NA. [Collection of proceedings and report of sessions, twelfth session of the International Commission on Illumination, Stockholm, June and July, 1951]. New York: Bureau Central de la CIE; 1951.</Reference>
+</References>
+
+## CL<sub>A</sub>, CS, and the CS Calculator
+
+*Circadian-effective light* (CL<sub>A</sub>) is a biophysical construct relating the spectral sensitivity of the human retina to optical radiation for stimulation of the biological clock in the brain’s suprachiasmatic nuclei (SCN). The definition of circadian-effective light, or CL<sub>A</sub>, was first proposed in 2005 **(3)** and refined in 2010. **(4)** Following extensive research, the definition of circadian-effective light was revised, replacing CL<sub>A</sub> with CL<sub>A</sub> 2.0. **(5, 6)** As such, CL<sub>A</sub> 2.0 is now postulated to define the spectral sensitivity of the human circadian system to different wavelengths of optical radiation. 
+
+To quantify how different amounts, or levels, of CL<sub>A</sub> 2.0 affect the neural signal strength reaching the SCN, the *circadian stimulus* metric, or CS, was developed. **(3-6)** CS represents the operating characteristic of the phototransduction circuits in the retina, from threshold (i.e., just barely enough to stimulate the SCN) to saturation (i.e., the maximum possible response to circadian-effective light, no matter how much optical radiation is provided to the retina). 
+
+The current version of the **CS Calculator** quantifies optical radiation incident on the human retina in terms of CL<sub>A</sub> 2.0 and CS. The **CS Calculator** uses the relative spectral power distribution (SPD) of one or more light sources and the amount, or level, of photopic illuminance, based on $V(\lambda)$, incident on the cornea to determine circadian-effective light, CL<sub>A</sub> 2.0. From CL<sub>A</sub> 2.0, the signal strength, CS, is determined. A wide variety of other metrics, like chromaticity, correlated color temperature (CCT), color rendering index (CRI), and gamut area index (GAI) are also determined from the same relative spectral power distributions. A series of graphical representations accompany the numerical calculations.  
+
+The previous version of the **CS Calculator**, based upon the 2005 formulation of CL<sub>A</sub>, **(3)** is essentially the same except circadian light is now calculated using CL<sub>A</sub> 2.0 as defined in 2021. **(5, 6)**
+
+
+<References>
+  <Reference num={3}>Rea MS, Figueiro MG, Bullough JD, Bierman A. A model of phototransduction by the human circadian system. Brain Res Rev. 2005;50(2):213-28.</Reference>
+  <Reference num={4}>Rea MS, Figueiro MG, Bierman A, Bullough JD. Circadian light. J Circadian Rhythms. 2010;8(1):2.</Reference>
+  <Reference num={5}>Rea MS, Nagare R, Figueiro MG. Modeling circadian phototransduction: Retinal neurophysiology and neuroanatomy. Front Neurosci. 2021;14:1467.</Reference>
+  <Reference num={6}>Rea MS, Nagare R, Figueiro MG. Modeling circadian phototransduction: Quantitative predictions of psychophysical data. Front Neurosci. 2021;15:44.</Reference>
+</References>
+
