@@ -9,6 +9,8 @@ If you'd like to request a custom markdown component, or create one yourself, se
 ### Table of Contents
 
 * [AlertBox](#alertbox)
+* [BlockQuote](#blockquote)
+* [CSCalcCitationGenerator](#cscalccitationgenerator)
 * [DocLink](#doclink)
 * [Icon](#icon)
 * [ImageGallery](#imagegallery)
@@ -40,6 +42,36 @@ Make some text standout.
   * "indigo"
   * "purple"
   * "pink"
+
+## BlockQuote
+
+Make a quote stand
+
+```jsx
+<BlockQuote by="Daan and Beersma" ref_num={1}>A useful model should be minimally complex to account for an existing set of data and maximally specific about what its parameters mean in physiological terms. It should not aim at completeness. The essence of a model's usefulness is in being a simplification of nature, rather than in approaching the complexity of nature itself.</BlockQuote>
+```
+
+<img src="./assets/img/md/components/BlockQuote.png" />
+
+### props
+
+* by (required) - the author of the quote
+* ref_num (optional) - reference a <Reference /> number
+
+## CSCalcCitationGenerator
+
+A one off component to aid in creating up-tp-date citations for the cs calculator. Pulls latest commit date and published date from GitHub
+
+```jsx
+<CSCalcCitationGenerator />
+```
+
+<img src="./assets/img/md/components/CSCalcCitationGenerator.png" />
+
+### props
+
+* by (required) - the author of the quote
+* ref_num (optional) - reference a <Reference /> number
 
 ## DocLink
 
@@ -206,6 +238,9 @@ A wrapper for styling references in your docs pages.
 
 <img src="./assets/img/md/components/References.png" />
 
-#### props
+#### references props
 
 none
+#### reference props
+
+* num (optional) - number the reference.
