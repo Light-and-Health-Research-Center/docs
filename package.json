@@ -28,6 +28,7 @@
     "next": "latest",
     "next-mdx-remote": "^3.0.2",
     "next-sitemap": "^1.6.133",
+    "node-fetch": "^2.6.1",
     "octicons-react": "^1.0.9",
     "prism-material-themes": "^1.0.4",
     "prop-types": "^15.7.2",

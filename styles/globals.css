@@ -68,6 +68,10 @@
 }
 
 @layer components {
+  .citation-generator-button {
+    @apply py-1 px-2 rounded-md border shadow-md hover:bg-gray-100 focus:outline-none focus-visible:ring ring-barbiePink-60 ring-offset-2 active:bg-gray-300;
+  }
+
   * .mdx .katex *{
     font-family: KaTeX_Main, Times New Roman, serif !important
   }
