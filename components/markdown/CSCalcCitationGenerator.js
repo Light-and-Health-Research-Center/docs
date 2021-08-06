@@ -9,7 +9,7 @@ export default function CSCalcCitationGenerator() {
   const today = new Date();
 
   useEffect(async () => {
-    async () => {
+    const getGithubDates = async() => {
       const res = await fetch(
         `https://api.github.com/repos/Light-and-Health-Research-Center/cscalc`
       );
@@ -18,6 +18,7 @@ export default function CSCalcCitationGenerator() {
       setUpdated(new Date(json.updated_at));
       setPublished(new Date(json.created_at));
     }
+    getGithubDates();
   }, []);
 
   var months = [
