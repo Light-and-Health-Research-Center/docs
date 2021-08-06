@@ -8,7 +8,7 @@ export default function CSCalcCitationGenerator() {
   const version = "2.0.0";
   const today = new Date();
 
-  useEffect(async () => {
+  useEffect(() => {
     const getGithubDates = async() => {
       const res = await fetch(
         `https://api.github.com/repos/Light-and-Health-Research-Center/cscalc`
