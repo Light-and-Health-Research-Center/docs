@@ -9,13 +9,15 @@ export default function CSCalcCitationGenerator() {
   const today = new Date();
 
   useEffect(async () => {
-    const res = await fetch(
-      `https://api.github.com/repos/Light-and-Health-Research-Center/cscalc`
-    );
-    if (!res.ok) return;
-    const json = await res.json();
-    setUpdated(new Date(json.updated_at));
-    setPublished(new Date(json.created_at));
+    async () => {
+      const res = await fetch(
+        `https://api.github.com/repos/Light-and-Health-Research-Center/cscalc`
+      );
+      if (!res.ok) return;
+      const json = await res.json();
+      setUpdated(new Date(json.updated_at));
+      setPublished(new Date(json.created_at));
+    }
   }, []);
 
   var months = [
