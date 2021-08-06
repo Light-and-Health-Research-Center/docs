@@ -13,7 +13,7 @@ export default function NavDisclosure({ structure, title, path, slug }) {
   }
 
   return (
-    <nav>
+    <nav className="mb-4">
       <Link href={path}>
         <a className="group focus:outline-none">
           <div className="pb-2">
