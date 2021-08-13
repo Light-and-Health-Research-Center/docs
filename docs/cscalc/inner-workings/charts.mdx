@@ -1,4 +1,34 @@
 ---
 title: "Charts"
-desc: "A deep dive into the charts panel of the CS Calculator 2.0"
+desc: "Descriptions of each of the SPD, chromaticity, and color rendering charts."
 ---
+
+
+## SPD
+
+The SPD (spectral power distribution) chart shows a representation of the radiant power emitted by a light source as a function of wavelength. The plotted SPDs incorporate linear interpolation between the wavelengths used to define the SPD and have a peak value of 1.0 at the wavelength where the spectral power is greatest. If a combination of sources is selected with nonzero illuminance values, the SPD for each component source as well as the Combined Source SPD are plotted. The Combined Source SPD has a peak value of 1.0 for the wavelength where the spectral power is greatest. The component source SPDs are scaled relative to their contribution to the Combined Source SPD. Also shown in this chart is one of two Relative Spectral Contribution of the Circadian Response spectral sensitivity function, either “warm” or “cool” as defined by Rea et al. (2021a) and Rea et al. (2021b).
+
+<References>
+  <Reference>Rea, M. S., Nagare, R. & Figueiro, M. G. (2021). <a href="https://www.frontiersin.org/articles/10.3389/fnins.2020.615305/full" target="_blank">Modeling circadian phototransduction: Retinal neurophysiology and neuroanatomy.</a> <i>Front Neurosci</i> <b>14</b>, 615305, doi:10.3389/fnins.2020.615305</Reference>
+  <Reference>Rea, M. S., Nagare, R. & Figueiro, M. G. (2021). <i>Modeling circadian phototransduction: Quantitative predictions of psychophysical data.</i> <i>Front Neurosci</i> <b>15</b>, 615322, doi:10.3389/fnins.2021.615322</Reference>
+</References>
+
+## Chromaticity
+
+The Chromaticity chart shows a portion of the CIE 1931 (x,y) chromaticity diagram and the calculated (x,y) chromaticity coordinates for the SPD (or the Combined Source SPD) as defined in *CIE 15: Colorimetry, 4th edition*, and represented by a filled circle. Also shown in this chart are a curved line representing the blackbody locus (the chromaticity coordinates of a Planckian radiator heated to various temperatures), and line segments representing contours of equal correlated color temperature (CCT). The terms blackbody locus, Planckian radiator, and CCT are also defined in CIE Publication 15.
+
+<References>
+  <Reference>Commission Internationale de l'Éclairage. <a target="_blank" href="https://cie.co.at/publications/colorimetry-4th-edition"><i>CIE 015: Colorimetry, 4th Edition</i></a>.  (Commission Internationale de l'Éclairage, 2018).
+  </Reference>
+</References>
+
+## Color Rendering
+
+The Color Rendering chart shows a filled circle representing the SPD (or Combined Source SPD) in terms of its color rendering index (CRI) along the horizontal (x) axis, and its gamut area index (GAI) along the vertical (y) axis. The CRI is defined in *CIE 15: Colorimetry, 4th edition*, and the GAI is defined in *ASSIST Recommends: Recommendations for Specifying Color Properties of Light Sources for Retail Merchandising.* Also shown in this diagram is a rectangular region in (x,y) space that includes CRI and GAI values between 80 and 100 inclusively. This region represents combinations of CRI and GAI values that would be likely to be judged acceptable by people for the color appearance of illuminated objects.
+
+<References>
+  <Reference>Commission Internationale de l'Éclairage. <a target="_blank" href="https://cie.co.at/publications/colorimetry-4th-edition"><i>CIE 015: Colorimetry, 4th Edition</i></a>.  (Commission Internationale de l'Éclairage, 2018).
+  </Reference>
+  <Reference>Alliance for Solid-State Illumination Systems and Technologies (ASSIST). <a href="https://www.lrc.rpi.edu/programs/solidstate/assist/pdf/AR-SpecifyColorRec-March2010.pdf" target="_blank">Recommendations for specifying color properties of light sources for retail merchandising.</a> <i>Assist Recommends</i> <b>8</b> (2010). 
+  </Reference>
+</References>
