@@ -241,7 +241,7 @@ pre[class*="language-"] {
   background: #f9fafb;
 }
 
-code {
+code:not([class*="language-"]) {
   @apply border rounded-md text-sm px-1 py-0.5;
 }
 
