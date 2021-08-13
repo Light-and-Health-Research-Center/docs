@@ -1,6 +1,6 @@
 ---
 title: "Output metrics"
-desc: "A deep dive into the Metrics panel of the CS Calculator 2.0"
+desc: "All of the outputted metrics of the CS Calculator 2.0"
 ---
 
 ## Circadian Stimulus (CS)
@@ -13,17 +13,23 @@ The irradiance at the cornea weighted to reflect the spectral sensitivity of the
 
 ## Illuminance
 
-The amount of light (luminous flux) incident on a surface area. Illuminance is measured in footcandles (lumens/square foot) or lux (lx, lumens/square meter). One footcandle equals 10.76 lx, although for convenience 10 lx commonly is used as the equivalent.
+The amount of light (luminous flux) incident on a surface area. Illuminance is measured in footcandles ($\frac{lm}{ft^2}$) or lux ($lx$, $\frac{lm}{m^2}$). One footcandle equals 10.76 $lx$, although for convenience 10 $lx$ commonly is used as the equivalent.
 
 ## Irradiance
 
-The irradiance of a surface per unit frequency or wavelength, depending on whether the spectrum is taken as a function of frequency or of wavelength. The two forms have different dimensions: spectral irradiance of a frequency spectrum is measured in watts per square metre per hertz (W·m<sup>−2</sup>·Hz<sup>−1</sup>), while spectral irradiance of a wavelength spectrum is measured in watts per square metre per metre (W·m<sup>−3</sup>), or more commonly watts per square metre per nanometre (W·m<sup>−2</sup>·nm<sup>−1</sup>).
+The irradiance of a surface per unit frequency or wavelength, depending on whether the spectrum is taken as a function of frequency or of wavelength. The two forms have different dimensions: spectral irradiance of a frequency spectrum is measured in watts per square metre per hertz ($W*m^{-2}*Hz^{-1}$), while spectral irradiance of a wavelength spectrum is measured in watts per square metre per metre ($W*m^{-3}$), or more commonly watts per square metre per nanometre ($W*m^{-2}*nm^{-1}$).
 
 ## Photon Flux
 
 The number of photons per second per unit area.
 
-## Equivalent Melanopic Lux (EML)
+## Melanopic EDI (m-EDI)
+
+As per CIE S 026 definition, *m-EDI is illuminance, produced by radiation conforming to standard daylight (D65), that provides an equal melanopic irradiance as the test source, where melanopic irradiance is the effective photobiological irradiance with the spectral irradiance, spectrally weighted with the melanopic action spectrum.* Thus 100 photopic lx equals 100 m-EDI for a D65 source.
+
+<References>
+  <Reference>Commission Internationale de l'Éclairage, 2018. <i>CIE system for metrology of optical radiation for ipRGC-influenced responses to light,</i> CIE S 026/E:2018. Commission Internationale de l'Éclairage. <a target="_blank" href="http://cie.co.at/publications/cie-system-metrology-optical-radiation-iprgc-influenced-responses-light-0">http://cie.co.at/publications/cie-system-metrology-optical-radiation-iprgc-influenced-responses-light-0</a></Reference>
+</References>
 
 ## Correlated Color Temperature (CCT)
 
@@ -47,4 +53,4 @@ The dominant or complementary wavelength and purity aspects of the color taken t
 
 ## CIE &alpha;-opic Irradiances
 
-Effective photobiological irradiance with the spectral irradiance, Ee,λ(λ), spectrally weighted with the α-opic action spectrum sα(λ)
+Effective photobiological irradiance with the spectral irradiance, $E_e,\lambda(\lambda)$, spectrally weighted with the α-opic action spectrum $s_\alpha(\lambda)$.
