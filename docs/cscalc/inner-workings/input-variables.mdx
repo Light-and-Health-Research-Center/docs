@@ -1,4 +1,16 @@
 ---
 title: "Input variables"
-desc: "Input variables desc"
+desc: "Additional input variables in addition to SPD and illuminance data."
 ---
+
+## General Info
+
+The model of circadian phototransduction published in 2005 and the revised in 2012, represent the “instantaneous” response from, and thus a stimulus to, a single neural circuit in the retina stimulating the SCN. Even though it took a finite amount of time to experimentally determine CLA and CS (1 hour of exposure), these two quantities can now be taken from the psychological response domain to the physical stimulus domain characterizing the spectral sensitivity of a single circadian phototransduction circuit as well as an important response characteristic to different amounts of spectrally weighted optical radiation. The original model of circadian phototransduction was, however, silent with respect to different exposure durations and the distributions of light exposures across the retina. Clearly the duration and distribution of light exposure will affect the total amount of melatonin suppressed at night. For a fixed spectrum and amount, exposures of longer durations and covering more area of the retina will produce greater attenuation (and vice versa). Spatially, light entering the eyes from a point source will not be similarly effective as the same amount of light entering the eyes from an extended source. Thus, to predict the total amount of nocturnal melatonin suppression from light exposures of different durations and spatial extent, CLA and CS were augmented by only one duration-dependent parameter and one low precision distribution-dependent parameter.
+
+## Duration of exposure
+
+The functional relationship between melatonin suppression and the light spectrum and amount was extended by duration-dependent parameter to predict circadian stimulus / nocturnal melatonin suppression during the early biological night for exposure durations ranging between 0.5-h and 3.0-h. Recently published data using the duration factor suggest that ambient lighting commonly found in North American homes will not suppress melatonin for durations up to 3 h, whereas extended use of self-luminous displays in the home prior to sleep can.
+
+## Distribution Scalar
+
+The functional relationship between melatonin suppression and the light spectrum and amount was extended by distribution-dependent parameter to predict circadian stimulus / nocturnal melatonin suppression during the early biological night for three different types of light source spatial profiles - ganzfeld type light box (weighting = 2.0), narrow linear on-axis (weighting = 1.0), and indirect overhead (weighting = 0.5).
