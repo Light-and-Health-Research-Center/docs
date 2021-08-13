@@ -200,7 +200,7 @@
 
 /* Prism */
 pre[class*="language-"],
-code[class*="language-"] *{
+code[class*="language-"] *, code{
   @apply text-gray-800;
   text-shadow: none;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
@@ -239,6 +239,10 @@ pre[class*="language-"] {
   @apply border rounded-md text-sm py-2 px-4 m-4;
   overflow: auto;
   background: #f9fafb;
+}
+
+code {
+  @apply border rounded-md text-sm px-1 py-0.5;
 }
 
 :not(pre) > code[class*="language-"] {
