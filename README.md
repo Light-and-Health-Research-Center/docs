@@ -4,7 +4,7 @@
 <img src="./assets/img/md/readme/books.jpg" width="400px">
 </p>
 
-A place to author, store, and present light and health documentation.
+A place to author, store, and access light and health documentation from the Light and Health Research Cetner at Mount Sinai.
 
 This open-source repository contains the source code and documentation Markdown files for [docs.light-health.org](https://docs.light-health.org).
 
