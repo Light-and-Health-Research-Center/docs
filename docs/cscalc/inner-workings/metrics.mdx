@@ -5,7 +5,7 @@ desc: "All of the outputted metrics of the CS Calculator 2.0"
 
 ## Circadian Stimulus (CS)
 
-The calculated effectiveness of the spectrally weighted irradiance at the cornea from threshold (CS = 0.1) to saturation (CS = 0.7), assuming a fixed duration of exposure of 1 hour.
+The postulated instantaneous magnitude of the spectrally weighted, circadian-effective irradiance at the cornea (CL<sub>A</sub>) mapped to an effectiveness scale from threshold (CS ≈ 0.1) to saturation (CS ≈ 0.7). The scale directly corresponds to the amount of melatonin suppression occurring in the middle of the subjective night for one hour of exposure.
 
 <References>
   <Reference>Rea, M. S., Nagare, R. & Figueiro, M. G. (2021). <a href="https://www.frontiersin.org/articles/10.3389/fnins.2021.615322/full" target="_blank">Modeling circadian phototransduction: Quantitative predictions of psychophysical data.</a> <i>Front Neurosci</i> <b>15</b>, 615322, doi:10.3389/fnins.2021.615322</Reference>
@@ -13,7 +13,7 @@ The calculated effectiveness of the spectrally weighted irradiance at the cornea
 
 ## Circadian Light (CL<sub>A</sub> 2.0)
 
-The irradiance at the cornea weighted to reflect the spectral sensitivity of the human circadian system as measured by acute melatonin suppression after a 1-hour exposure.
+A nonlinear function of spectral irradiance postulated to represent the spectral sensitivity of the retinal mechanisms that generate neural signals reaching the human suprachiasmatic nuclei (SCN). Thus, CL<sub>A</sub> is an instantaneous, spectrally weighted quantity analogous to photopic illuminance, but because it is a nonlinear transformation of irradiance, units cannot be assigned to this metric.
 
 <References>
   <Reference>Rea, M. S., Nagare, R. & Figueiro, M. G. (2021). <a href="https://www.frontiersin.org/articles/10.3389/fnins.2021.615322/full" target="_blank">Modeling circadian phototransduction: Quantitative predictions of psychophysical data.</a> <i>Front Neurosci</i> <b>15</b>, 615322, doi:10.3389/fnins.2021.615322</Reference>
@@ -21,7 +21,7 @@ The irradiance at the cornea weighted to reflect the spectral sensitivity of the
 
 ## Illuminance
 
-The amount of light (luminous flux) incident on a surface area. Illuminance is measured in footcandles ($\frac{lm}{ft^2}$) or lux ($lx$, $\frac{lm}{m^2}$). One footcandle equals 10.76 $lx$, although for convenience 10 $lx$ commonly is used as the equivalent.
+The amount of radiant power per planar surface area weighted spectrally by the photopic luminous efficiency function, V(&#x3BB;). Illuminance is measured in footcandles (fc <i>or</i> lm/ft<sup>2</sup>) or lux (lx <i>or</i> lm/m<sup>2</sup>). One footcandle equals 10.76 lx, although for convenience 10 lx commonly is used as the equivalent.
 
 <References>
   <Reference>Sharpe, L. T.; Stockman, A.; Jagla, W.; Jägle, H. (2005). <a href="https://web.archive.org/web/20120426041536/http://calendar.arvo.org/5/11/3/Sharpe-2005-jov-5-11-3.pdf" target="_blank">"A luminous efficiency function, V*(λ), for daylight adaptation"</a> (PDF). <i>Journal of Vision.</i> <b>5</b> (11): 948–968. doi:10.1167/5.11.3</Reference>
@@ -29,7 +29,7 @@ The amount of light (luminous flux) incident on a surface area. Illuminance is m
 
 ## Irradiance
 
-The irradiance of a surface per unit frequency or wavelength, depending on whether the spectrum is taken as a function of frequency or of wavelength. The two forms have different dimensions: spectral irradiance of a frequency spectrum is measured in watts per square metre per hertz ($W*m^{-2}*Hz^{-1}$), while spectral irradiance of a wavelength spectrum is measured in watts per square metre per metre ($W*m^{-3}$), or more commonly watts per square metre per nanometre ($W*m^{-2}*nm^{-1}$).
+The radiant flux (power, in watts) per unit area (m<sup>-2</sup>) received by a planar surface. Typical units are W m<sup>-2</sup>.
 
 <References>
   <Reference>Commission Internationale de l'Éclairage, 2018. <i>CIE system for metrology of optical radiation for ipRGC-influenced responses to light,</i> CIE S 026/E:2018. Commission Internationale de l'Éclairage. <a href="http://cie.co.at/publications/cie-system-metrology-optical-radiation-iprgc-influenced-responses-light-0" target="_blank">http://cie.co.at/publications/cie-system-metrology-optical-radiation-iprgc-influenced-responses-light-0</a></Reference>
@@ -53,15 +53,15 @@ As per CIE S 026 definition, *m-EDI is illuminance, produced by radiation confor
 
 ## Correlated Color Temperature (CCT)
 
-A specification for white light sources used to describe the dominant color tone along the dimension from warm (yellows and reds) to cool (blue). Lamps with a CCT rating below 3200 K are usually considered warm sources, whereas those with a CCT above 4000 K usually considered cool in appearance. Temperatures in between are considered neutral in appearance. Technically, CCT extends the practice of using temperature, in kelvins (K), for specifying the spectrum of light sources other than blackbody radiators. Incandescent lamps and daylight closely approximate the spectra of black body radiators at different temperatures and can be designated by the corresponding temperature of a blackbody radiator. The spectra of fluorescent and LED sources, however, differ substantially from black body radiators yet they can have a color appearance similar to a blackbody radiator of a particular temperature as given by CCT.
+A specification for white light sources used to describe the dominant color tone from reddish (warm) to neutral to bluish (cool). Color temperature, in kelvin (K), can be used to fully characterize the spectral power distribution of a blackbody radiator (an incandescent lamp and the sun are close realizations of blackbody radiators). CCT extends the practice of using temperature to characterize the dominant color tone of white-light spectra. Light sources with a CCT rating below 3200 K are usually considered warm sources, whereas those with a CCT above 4500 K usually considered cool. Temperatures in between are considered neutral in appearance.
 
 <References>
   <Reference>International Organization for Standardization (ISO) / Commission Internationale de l´Eclairage (CIE). <a href="https://www.iso.org/standard/69034.html" target="_blank">Colorimetry — Part 5: CIE 1976 L*u*v* colour space and u', v' uniform chromaticity scale diagram.</a> Standard No. ISO/CIE 11664-5:2016. (International Organization for Standardization, Geneva, 2016).</Reference>
 </References>
 
-## Delta u,v (Duv)
+## Delta u,v (D<sub>uv</sub>)
 
-Defined by American National Standard Institute (ANSI) that quantifies the distance between the chromaticity of a given light source and a blackbody radiator of equal CCT. A negative Duv indicates that the source is “below” the blackbody locus, having a purplish tint, whereas a positive Duv indicates that the source is “above” the blackbody locus, having a greenish tint.
+Defined by American National Standard Institute (ANSI), an amount that quantifies the distance between the chromaticity of a given light source and a blackbody radiator of the same CCT. A negative D<sub>uv</sub> indicates that the chromaticity of the source is below the blackbody locus in chromaticity space, whereas a positive D<sub>uv</sub> indicates that the chromaticity of the source is above the blackbody locus.
 
 <References>
   <Reference>National Electrical Manufacturers Association (NEMA). American national standard for electric lamps—specifications for the chromaticity of solid state lighting (SSL) products. Standard No. ANSI C78.377-2017. (National Electrical Manufacturers Association (NEMA), New York, 2017).</Reference>
@@ -69,7 +69,7 @@ Defined by American National Standard Institute (ANSI) that quantifies the dista
 
 ## Color Rendering Index (CRI)
 
-A rating index commonly used to represent how well a light source renders the colors of objects that it illuminates. For a CRI value of 100, the maximum value, the colors of objects can be expected to be seen as they would appear under an incandescent or daylight spectrum of the same correlated color temperature (CCT). Sources with CRI values less than 50 are generally regarded as rendering colors poorly, that is, colors may appear unnatural.
+A rating index commonly used to represent how well a light source renders the colors of objects that it illuminates. For a CRI value of 100, the maximum value, the colors of objects can be expected to be seen as they would appear under an incandescent or daylight spectrum of the same correlated color temperature (CCT). Most commercially available white light sources produce CRI values of 80 or higher.
 
 <References>
   <Reference>Commission Internationale de l'Éclairage. <i>Method of Measuring and Specifying Colour Rendering Properties of Light Sources.</i> Vol. CIE 013.3-1995 (Commission Internationale de l'Éclairage, 1995).</Reference>
@@ -77,7 +77,7 @@ A rating index commonly used to represent how well a light source renders the co
 
 ## Gamut Area Index (GAI)
 
-A measure of color rendering based upon volume in color space. It is the range of colors achievable on a given color reproduction medium (or present in an image on that medium) under a given set of viewing conditions.
+A measure of color rendering characterizing the degree to which object colors appear saturated, or vivid. People tend to prefer the appearance of colored objects when GAI is within the range of 80 to 100. Below 80, object colors will appear desaturated and bland. Above 100, object colors begin to look too saturated and unnatural. For example, a GAI of 140 can make some types of food appear artificially colored.
 
 <References>
   <Reference>Rea, M. S. & Freyssinier, J. P. <a href="https://onlinelibrary.wiley.com/doi/10.1002/col.20399" target="_blank">Color rendering: A tale of two metrics. Color Research & Application</a> <b>33</b>, 192-202, doi:10.1002/col.20399 (2008).</Reference>
@@ -85,7 +85,7 @@ A measure of color rendering based upon volume in color space. It is the range o
 
 ## Chromaticity
 
-The dominant or complementary wavelength and purity aspects of the color taken together, or of the aspects specified by the chromaticity coordinates of the color taken together. It describes the properties of light related to hue and saturation, but not luminance (brightness).
+A numerical description of the spectral power distribution (light source) or the spectral reflectance distribution (illuminated object) based upon a system of color matching three primary lights (nominally, red, green, and blue) to the color appearance of the light source or the illuminated object. Thus, just three values, one for the amount of light needed by each of the three primaries to match the color appearance of the light source or the illuminated object, are needed to describe any color. Chromaticity coordinates in the CIE 1931 system reduce the three-dimensional color space (X, Y, Z) to 2 dimensions (x, y) by normalizing the absolute values.
 
 <References>
   <Reference>National Electrical Manufacturers Association (NEMA). <a href="https://www.nema.org/standards/view/American-National-Standard-for-Electric-Lamps-Specifications-for-the-Chromaticity-of-Solid-State-Lighting-Products" target="_blank">American national standard for electric lamps—specifications for the chromaticity of solid state lighting (SSL) products.</a> Standard No. ANSI C78.377-2017. (National Electrical Manufacturers Association (NEMA), New York, 2017).</Reference>
@@ -93,7 +93,7 @@ The dominant or complementary wavelength and purity aspects of the color taken t
 
 ## CIE &alpha;-opic Irradiances
 
-Effective photobiological irradiance with the spectral irradiance, $E_e,\lambda(\lambda)$, spectrally weighted with the α-opic action spectrum $s_\alpha(\lambda)$.
+Luminous efficiency functions based upon the spectral absorption of the different <i>in situ</i> human retinal photopigments developed by the Commission Internationale de l'Éclairage (CIE).
 
 <References>
   <Reference>Commission Internationale de l'Éclairage, 2018. <i>CIE system for metrology of optical radiation for ipRGC-influenced responses to light,</i> CIE S 026/E:2018. Commission Internationale de l'Éclairage. <a target="_blank" href="http://cie.co.at/publications/cie-system-metrology-optical-radiation-iprgc-influenced-responses-light-0">http://cie.co.at/publications/cie-system-metrology-optical-radiation-iprgc-influenced-responses-light-0</a></Reference>
