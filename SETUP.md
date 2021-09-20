@@ -41,7 +41,7 @@ Follow these steps to get a development environment up and running on your machi
   ```
 
   ```shell-session
-  yarn
+  npm i
   ```
 
 ## [Create Github personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
@@ -59,7 +59,7 @@ Follow these steps to get a development environment up and running on your machi
 ## Run developement mode
 
   ```shell-session
-  yarn dev
+  npm run dev
   ```
 
 ## Open app
